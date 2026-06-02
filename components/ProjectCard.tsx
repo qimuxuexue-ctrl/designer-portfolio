@@ -22,7 +22,7 @@ export function ProjectCard({ project, variant = "grid" }: ProjectCardProps) {
         </div>
         <div className="mt-5 grid items-start gap-4 md:grid-cols-[0.85fr_1fr] md:gap-8">
           <h3
-            className="text-center text-4xl font-black uppercase leading-[0.92] tracking-[-0.03em] md:text-left md:text-4xl lg:text-5xl"
+            className="text-center font-display text-4xl font-black uppercase leading-[0.92] md:text-left md:text-4xl lg:text-5xl"
             style={{ color: project.accent }}
           >
             {project.title}

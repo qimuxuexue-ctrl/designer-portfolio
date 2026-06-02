@@ -4,7 +4,7 @@ export function Footer() {
   return (
     <footer className="bg-blush text-center text-ink">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
-        <h2 className="text-4xl font-black tracking-[-0.02em] text-plum md:text-5xl">
+        <h2 className="font-display text-4xl font-black text-plum md:text-5xl">
           Let&apos;s chat!
         </h2>
         <p className="mx-auto mt-9 max-w-2xl text-base font-medium leading-8 md:text-lg">

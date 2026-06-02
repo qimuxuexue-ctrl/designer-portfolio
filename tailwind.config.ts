@@ -21,6 +21,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Arial", "sans-serif"],
+        display: ["var(--font-display)", "Arial Black", "Arial", "sans-serif"],
         serif: ["Georgia", "serif"]
       }
     }
