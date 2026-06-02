@@ -1,9 +1,9 @@
 import Home from "@/app/page";
 
 export const metadata = {
-  title: "Work | North Studio Portfolio"
+  title: "Portfolio | Halo Form Studio"
 };
 
-export default function WorkPage() {
+export default function PortfolioPage() {
   return <Home />;
 }

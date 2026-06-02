@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1000" role="img" aria-label="Kitchen product placeholder">
+  <rect width="1280" height="1000" fill="#e9eee7"/>
+  <rect y="670" width="1280" height="330" fill="#f7f7f2"/>
+  <rect x="890" y="160" width="26" height="595" rx="13" fill="#b99658"/>
+  <path d="M900 190c155 0 178 150 178 262" fill="none" stroke="#b99658" stroke-width="34" stroke-linecap="round"/>
+  <rect x="520" y="330" width="175" height="420" rx="42" fill="#d92f26"/>
+  <rect x="548" y="410" width="120" height="160" rx="16" fill="#f6ead3"/>
+  <rect x="570" y="280" width="82" height="70" rx="20" fill="#222"/>
+  <circle cx="610" cy="482" r="48" fill="#fff"/>
+  <path d="M230 715c20-54 100-56 130-10 28 45-14 96-70 91-50-5-78-36-60-81z" fill="#d93526"/>
+  <path d="M375 735c22-64 118-62 147-7 24 47-20 92-79 87-49-4-85-33-68-80z" fill="#cf2a20"/>
+  <path d="M785 742c19-55 97-58 127-12 29 45-15 94-71 89-48-4-73-34-56-77z" fill="#d83225"/>
+  <ellipse cx="610" cy="820" rx="430" ry="48" fill="#d5d5cf" opacity=".45"/>
+  <text x="74" y="100" fill="#9a9f98" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">PLACEHOLDER IMAGE</text>
+</svg>

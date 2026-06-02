@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1000" role="img" aria-label="Personal care campaign placeholder">
+  <rect width="1280" height="1000" fill="#ff7f45"/>
+  <circle cx="750" cy="380" r="230" fill="#f2c1a5"/>
+  <path d="M560 325c55-145 250-175 350-80 88 84 102 233 34 354-74 132-248 160-371 80-110-71-69-222-13-354z" fill="#f4cdb9"/>
+  <path d="M505 208c64-118 266-132 362-38-138-25-265 22-362 38z" fill="#181818"/>
+  <rect x="455" y="395" width="245" height="430" rx="20" transform="rotate(-17 455 395)" fill="#214f31"/>
+  <rect x="506" y="435" width="158" height="260" rx="10" transform="rotate(-17 506 435)" fill="#f8f4e8"/>
+  <rect x="555" y="662" width="125" height="90" transform="rotate(-17 555 662)" fill="#f0a45d"/>
+  <circle cx="610" cy="540" r="38" fill="#d8ead8"/>
+  <path d="M380 727c-48-28-93-53-144-38-35 10-48 43-28 69 36 48 145 26 196 13z" fill="#f7e7de" opacity=".9"/>
+  <text x="74" y="100" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">PLACEHOLDER IMAGE</text>
+</svg>

@@ -17,7 +17,7 @@ html {
 
 body {
   margin: 0;
-  background: #f7f4ee;
+  background: #ffffff;
   color: #171717;
   font-family: var(--font-sans);
 }
@@ -33,7 +33,7 @@ a {
 }
 
 .marquee-track {
-  animation: marquee 22s linear infinite;
+  animation: marquee 28s linear infinite;
 }
 
 .marquee-track:hover {

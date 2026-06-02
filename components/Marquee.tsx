@@ -1,11 +1,14 @@
 export function Marquee() {
-  const text = "Now booking identity, packaging, and digital projects";
+  const text = "Now taking bookings for 2026";
 
   return (
-    <div className="overflow-hidden border-y border-ink/10 bg-mist/50 py-3 text-xs uppercase tracking-[0.18em]">
-      <div className="marquee-track flex w-max gap-8 whitespace-nowrap">
-        {Array.from({ length: 8 }).map((_, index) => (
-          <span key={index}>{text}</span>
+    <div className="overflow-hidden bg-bubblegum py-2 text-plum">
+      <div className="marquee-track flex w-max gap-10 whitespace-nowrap font-serif text-base uppercase">
+        {Array.from({ length: 10 }).map((_, index) => (
+          <span key={index} className="flex items-center gap-10">
+            {text}
+            <span className="font-sans text-lg">✶</span>
+          </span>
         ))}
       </div>
     </div>

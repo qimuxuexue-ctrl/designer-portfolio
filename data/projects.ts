@@ -11,37 +11,37 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    slug: "quiet-form",
-    title: "Quiet Form",
+    slug: "cove-naturals",
+    title: "Cove Naturals",
     category: "Brand Identity",
     year: "2026",
     summary:
-      "A refined visual system for a small objects studio, balancing editorial restraint with tactile product storytelling.",
+      "A bright product-led identity concept for a personal care label, built around clean packaging and warm campaign imagery.",
     services: ["Identity", "Art Direction", "Digital System"],
-    image: "/images/project-quiet-form.svg",
-    accent: "#4d5a43"
+    image: "/images/project-cove-naturals.svg",
+    accent: "#92165c"
   },
   {
-    slug: "field-notes",
-    title: "Field Notes",
+    slug: "aster-beauty",
+    title: "Aster Beauty",
     category: "Packaging",
     year: "2026",
     summary:
-      "Packaging concepts for a botanical goods label with spacious layouts, modular labels, and warm material cues.",
+      "A crisp packaging system concept for beauty accessories, using a soft studio backdrop and a modular product family.",
     services: ["Packaging", "Naming", "Campaign Direction"],
-    image: "/images/project-field-notes.svg",
-    accent: "#a95f3f"
+    image: "/images/project-aster-beauty.svg",
+    accent: "#92165c"
   },
   {
-    slug: "northline",
-    title: "Northline",
-    category: "Website Design",
+    slug: "earth-house",
+    title: "Earth House",
+    category: "Packaging Design",
     year: "2025",
     summary:
-      "A calm digital presence for an architecture practice, built around generous imagery and direct project navigation.",
-    services: ["Website", "UX Design", "Creative Direction"],
-    image: "/images/project-northline.svg",
-    accent: "#313c55"
+      "A domestic goods packaging concept photographed in a quiet kitchen scene with fresh produce and warm reflective surfaces.",
+    services: ["Packaging", "Art Direction", "Photography Direction"],
+    image: "/images/project-earth-house.svg",
+    accent: "#d7a8c2"
   },
   {
     slug: "soft-archive",

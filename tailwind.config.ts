@@ -10,11 +10,14 @@ const config: Config = {
     extend: {
       colors: {
         ink: "#171717",
-        paper: "#f7f4ee",
+        paper: "#ffffff",
         mist: "#dfded6",
         clay: "#a95f3f",
         moss: "#4d5a43",
-        dusk: "#313c55"
+        dusk: "#313c55",
+        bubblegum: "#ef66c5",
+        plum: "#92165c",
+        blush: "#f2e7e8"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Arial", "sans-serif"],

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1000" role="img" aria-label="Beauty packaging placeholder">
+  <rect width="1280" height="1000" fill="#c9cff8"/>
+  <rect x="230" y="420" width="120" height="270" fill="#f9f7f0"/>
+  <rect x="380" y="360" width="150" height="330" fill="#ffffff"/>
+  <rect x="565" y="300" width="170" height="390" fill="#f9f7f0"/>
+  <rect x="765" y="400" width="150" height="290" fill="#ffffff"/>
+  <rect x="950" y="455" width="120" height="235" fill="#f9f7f0"/>
+  <rect x="390" y="385" width="120" height="24" fill="#3152cf"/>
+  <rect x="585" y="325" width="130" height="26" fill="#3152cf"/>
+  <rect x="785" y="425" width="110" height="24" fill="#3152cf"/>
+  <circle cx="445" cy="520" r="52" fill="#28202a"/>
+  <path d="M632 435l72 36-72 36-72-36z" fill="#171717"/>
+  <rect x="610" y="545" width="70" height="95" rx="28" fill="#ef8fbe"/>
+  <circle cx="1010" cy="560" r="55" fill="#d9e5ff"/>
+  <text x="74" y="100" fill="#ffffff" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">PLACEHOLDER IMAGE</text>
+</svg>

@@ -2,27 +2,29 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-ink text-paper">
-      <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[1.2fr_0.8fr] md:px-8 md:py-16">
-        <div>
-          <p className="mb-4 text-sm uppercase tracking-[0.18em] text-paper/60">
-            Available for select collaborations
-          </p>
-          <h2 className="max-w-3xl font-serif text-5xl leading-none md:text-7xl">
-            Let&apos;s shape a thoughtful visual world.
-          </h2>
+    <footer className="bg-blush text-center text-ink">
+      <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
+        <h2 className="text-4xl font-black tracking-[-0.02em] text-plum md:text-5xl">
+          Let&apos;s chat!
+        </h2>
+        <p className="mx-auto mt-9 max-w-2xl text-base font-medium leading-8 md:text-lg">
+          I&apos;d love to hear more about your brand and answer any questions you may
+          have about my work.
+        </p>
+        <Link
+          className="mx-auto mt-9 inline-flex min-w-64 justify-center bg-plum px-12 py-4 text-xs font-black uppercase tracking-[0.55em] text-bubblegum transition hover:bg-ink"
+          href="/contact"
+        >
+          Email me
+        </Link>
+        <div className="mt-12 text-base font-medium leading-7">
+          <p>+1 400 403 077</p>
+          <p>Based in Melbourne, Australia.</p>
+          <p>Working with clients in Australia and globally.</p>
         </div>
-        <div className="flex flex-col justify-between gap-10 text-sm">
-          <div className="space-y-3">
-            <Link className="block transition hover:text-clay" href="/contact">
-              Contact the studio
-            </Link>
-            <a className="block transition hover:text-clay" href="mailto:hello@example.com">
-              hello@example.com
-            </a>
-            <p className="text-paper/60">Working with clients globally.</p>
-          </div>
-          <p className="text-paper/50">© 2026 North Studio. Original portfolio template.</p>
+        <div className="mt-7 flex justify-center gap-8 text-4xl">
+          <span>◎</span>
+          <span className="font-serif">p</span>
         </div>
       </div>
     </footer>
