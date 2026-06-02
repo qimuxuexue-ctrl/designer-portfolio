@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder artwork">
+  <rect width="1200" height="900" fill="#ece2d8"/>
+  <rect x="130" y="120" width="310" height="560" fill="#a95f3f"/>
+  <rect x="480" y="210" width="390" height="470" fill="#f7f4ee"/>
+  <rect x="760" y="135" width="210" height="535" fill="#171717"/>
+  <text x="130" y="770" fill="#171717" font-family="Arial, sans-serif" font-size="70">Field Notes</text>
+  <text x="134" y="820" fill="#171717" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">PLACEHOLDER PROJECT</text>
+</svg>

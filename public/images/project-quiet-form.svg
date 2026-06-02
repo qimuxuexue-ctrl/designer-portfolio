@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder artwork">
+  <rect width="1200" height="900" fill="#deded4"/>
+  <rect x="92" y="92" width="1006" height="706" fill="#f7f4ee"/>
+  <circle cx="870" cy="340" r="210" fill="#4d5a43"/>
+  <rect x="180" y="540" width="520" height="160" fill="#171717"/>
+  <text x="180" y="245" fill="#171717" font-family="Arial, sans-serif" font-size="70">Quiet Form</text>
+  <text x="184" y="315" fill="#171717" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">PLACEHOLDER PROJECT</text>
+</svg>

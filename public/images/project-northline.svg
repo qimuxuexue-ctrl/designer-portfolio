@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder artwork">
+  <rect width="1200" height="900" fill="#dfe4e0"/>
+  <rect x="110" y="95" width="980" height="710" fill="#313c55"/>
+  <rect x="190" y="165" width="400" height="540" fill="#f7f4ee"/>
+  <line x1="650" y1="175" x2="980" y2="705" stroke="#f7f4ee" stroke-width="12"/>
+  <text x="650" y="265" fill="#f7f4ee" font-family="Arial, sans-serif" font-size="70">Northline</text>
+  <text x="654" y="330" fill="#f7f4ee" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">PLACEHOLDER PROJECT</text>
+</svg>

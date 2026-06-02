@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Placeholder artwork">
+  <rect width="1200" height="900" fill="#e5dfd2"/>
+  <rect x="120" y="100" width="430" height="700" fill="#826f5b"/>
+  <rect x="610" y="100" width="370" height="500" fill="#f7f4ee"/>
+  <circle cx="795" cy="650" r="120" fill="#171717"/>
+  <text x="610" y="205" fill="#171717" font-family="Arial, sans-serif" font-size="70">Soft Archive</text>
+  <text x="614" y="270" fill="#171717" font-family="Arial, sans-serif" font-size="26" letter-spacing="8">PLACEHOLDER PROJECT</text>
+</svg>
