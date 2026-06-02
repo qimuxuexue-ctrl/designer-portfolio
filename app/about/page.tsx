@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "About | North Studio Portfolio"
+  title: "Hinna | Make things make sense"
 };
 
 export default function AboutPage() {

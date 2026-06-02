@@ -16,10 +16,8 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }: ProjectPageProps) {
-  const project = getProject(params.slug);
-
   return {
-    title: project ? `${project.title} | North Studio Portfolio` : "Project"
+    title: "Hinna | Make things make sense"
   };
 }
 

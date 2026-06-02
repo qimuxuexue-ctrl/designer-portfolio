@@ -1,7 +1,7 @@
 import Home from "@/app/page";
 
 export const metadata = {
-  title: "Work | North Studio Portfolio"
+  title: "Hinna | Make things make sense"
 };
 
 export default function WorkPage() {

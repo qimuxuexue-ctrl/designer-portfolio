@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Contact | North Studio Portfolio"
+  title: "Hinna | Make things make sense"
 };
 
 export default function ContactPage() {
