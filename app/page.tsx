@@ -8,7 +8,7 @@ export default function Home() {
       <Marquee />
 
       <section className="flex flex-col gap-0 px-4 pb-24 pt-14 md:px-8 md:pb-40 md:pt-16">
-        <h1 className="mx-auto mb-0 max-w-5xl text-center font-display text-[4.1rem] font-black uppercase leading-[0.88] text-titleBlue md:text-[7.35rem] lg:text-[8.55rem]">
+        <h1 className="mx-auto mb-0 max-w-5xl text-center font-display text-[4.1rem] font-black uppercase leading-[0.72] text-titleBlue md:text-[7.35rem] lg:text-[8.55rem]">
           Recent
           <br />
           Projects
