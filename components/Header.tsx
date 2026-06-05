@@ -24,14 +24,12 @@ export function Header() {
   return (
     <header className="relative z-50 bg-white">
       <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-6 md:px-12 md:py-8">
-        <nav className="hidden items-center gap-20 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] md:flex">
+        <nav className="hidden items-center gap-20 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] text-titleBlue md:flex">
           {leftLinks.map((link) => (
             <Link
               key={`${link.href}-${link.label}`}
               href={link.href}
-              className={`transition hover:text-plum ${
-                pathname.startsWith(link.href) ? "text-plum" : "text-ink"
-              }`}
+              className="transition hover:text-titleBlue"
             >
               {link.label}
             </Link>
@@ -40,28 +38,26 @@ export function Header() {
 
         <Link
           href="/"
-          className="justify-self-start font-sans text-[20px] font-normal uppercase tracking-[0.32em] md:justify-self-center md:text-2xl"
+          className="justify-self-start font-sans text-[20px] font-normal uppercase tracking-[0.32em] text-titleBlue md:justify-self-center md:text-2xl"
           onClick={() => setOpen(false)}
         >
           Halo Form Studio
         </Link>
 
-        <nav className="hidden items-center justify-end gap-12 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] md:flex">
+        <nav className="hidden items-center justify-end gap-12 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] text-titleBlue md:flex">
           {rightLinks.map((link) => (
             <Link
               key={`${link.href}-${link.label}`}
               href={link.href}
-              className={`transition hover:text-plum ${
-                pathname.startsWith(link.href) ? "text-plum" : "text-ink"
-              }`}
+              className="transition hover:text-titleBlue"
             >
               {link.label}
             </Link>
           ))}
-          <span className="font-sans text-sm font-normal normal-case tracking-normal text-plum">
+          <span className="font-sans text-sm font-normal normal-case tracking-normal text-titleBlue">
             ig
           </span>
-          <span className="font-serif text-2xl font-normal normal-case tracking-normal text-plum">
+          <span className="font-serif text-2xl font-normal normal-case tracking-normal text-titleBlue">
             p
           </span>
         </nav>
@@ -71,20 +67,20 @@ export function Header() {
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
         >
-          <span className="h-0.5 w-8 bg-plum" />
-          <span className="h-0.5 w-8 bg-plum" />
+          <span className="h-0.5 w-8 bg-titleBlue" />
+          <span className="h-0.5 w-8 bg-titleBlue" />
         </button>
       </div>
 
       {open ? (
         <nav className="border-t border-ink/10 px-7 py-7 md:hidden">
-          <div className="flex flex-col gap-4 font-sans text-2xl font-semibold uppercase text-plum">
+          <div className="flex flex-col gap-4 font-sans text-2xl font-semibold uppercase text-titleBlue">
             {mobileLinks.map((link) => (
               <Link
                 key={`${link.href}-${link.label}-mobile`}
                 href={link.href}
                 onClick={() => setOpen(false)}
-                className="transition hover:text-clay"
+                className="transition hover:text-titleBlue"
               >
                 {link.label}
               </Link>
