@@ -12,7 +12,7 @@ const leftLinks = [
 
 const rightLinks = [
   { href: "/about", label: "Journal" },
-  { href: "/contact", label: "Work with me" }
+  { href: "/contact", label: "Contact me" }
 ];
 
 const mobileLinks = [...leftLinks, ...rightLinks];
