@@ -3,6 +3,9 @@ const instagramUrl =
 
 type SocialIconLinksProps = {
   colorClassName: string;
+  gapClassName?: string;
+  instagramClassName?: string;
+  mailClassName?: string;
 };
 
 function InstagramIcon() {
@@ -21,13 +24,18 @@ function MailIcon() {
   );
 }
 
-export function SocialIconLinks({ colorClassName }: SocialIconLinksProps) {
-  const linkClass = `inline-flex h-6 w-6 items-center justify-center transition ${colorClassName}`;
+export function SocialIconLinks({
+  colorClassName,
+  gapClassName = "gap-8",
+  instagramClassName = "h-6 w-6",
+  mailClassName = "h-6 w-6"
+}: SocialIconLinksProps) {
+  const baseLinkClass = `inline-flex items-center justify-center transition ${colorClassName}`;
 
   return (
-    <>
+    <div className={`inline-flex items-center ${gapClassName}`}>
       <a
-        className={linkClass}
+        className={`${baseLinkClass} ${instagramClassName}`}
         href={instagramUrl}
         target="_blank"
         rel="noreferrer"
@@ -36,12 +44,12 @@ export function SocialIconLinks({ colorClassName }: SocialIconLinksProps) {
         <InstagramIcon />
       </a>
       <a
-        className={linkClass}
+        className={`${baseLinkClass} ${mailClassName}`}
         href="mailto:qimuxuexue@gmail.com"
         aria-label="Email"
       >
         <MailIcon />
       </a>
-    </>
+    </div>
   );
 }

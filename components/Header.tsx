@@ -55,7 +55,12 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <SocialIconLinks colorClassName="text-titleBlue hover:text-titleBlue" />
+          <SocialIconLinks
+            colorClassName="text-titleBlue hover:text-titleBlue"
+            gapClassName="gap-5"
+            instagramClassName="h-7 w-7"
+            mailClassName="h-6 w-6"
+          />
         </nav>
 
         <button
