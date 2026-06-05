@@ -18,6 +18,7 @@ const config: Config = {
         bubblegum: "#ef66c5",
         bookingBlue: "#547ADD",
         titleBlue: "#3C63C8",
+        sunYellow: "#F8D44D",
         plum: "#92165c",
         blush: "#f2e7e8"
       },
