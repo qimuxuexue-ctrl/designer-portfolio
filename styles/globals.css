@@ -45,6 +45,13 @@ a {
   animation-play-state: paused;
 }
 
+.marquee-separator {
+  display: inline-flex;
+  align-items: center;
+  line-height: 1;
+  transform: translateY(0.14em);
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);
