@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialIconLinks } from "@/components/SocialIconLinks";
 
 export function Footer() {
   return (
@@ -22,9 +23,8 @@ export function Footer() {
           <p>Based in Melbourne, Australia.</p>
           <p>Working with clients in Australia and globally.</p>
         </div>
-        <div className="mt-7 flex justify-center gap-8 text-4xl text-white">
-          <span className="font-sans text-2xl">ig</span>
-          <span className="font-serif">p</span>
+        <div className="mt-7 flex justify-center gap-8 text-white">
+          <SocialIconLinks colorClassName="text-white hover:text-sunYellow" />
         </div>
       </div>
     </footer>

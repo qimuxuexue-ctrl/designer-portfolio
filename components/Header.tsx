@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { SocialIconLinks } from "@/components/SocialIconLinks";
 
 const leftLinks = [
   { href: "/about", label: "About" },
@@ -54,12 +55,7 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <span className="font-sans text-sm font-normal normal-case tracking-normal text-ink transition hover:text-titleBlue">
-            ig
-          </span>
-          <span className="font-serif text-2xl font-normal normal-case tracking-normal text-ink transition hover:text-titleBlue">
-            p
-          </span>
+          <SocialIconLinks colorClassName="text-titleBlue hover:text-titleBlue" />
         </nav>
 
         <button
