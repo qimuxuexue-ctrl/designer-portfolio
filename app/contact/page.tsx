@@ -42,7 +42,7 @@ function RequiredMark({ show }: { show?: boolean }) {
 export default function ContactPage() {
   return (
     <main className="bg-white text-ink">
-      <section className="flex min-h-[72vh] flex-col justify-end bg-titleBlue px-5 pb-14 pt-16 text-center md:min-h-[78vh] md:px-8 md:pb-20 md:pt-24">
+      <section className="flex min-h-[72vh] flex-col justify-end bg-titleBlue px-5 pb-20 pt-16 text-center md:min-h-[78vh] md:px-8 md:pb-28 md:pt-24">
         <div>
           <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
             Contact me
