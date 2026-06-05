@@ -1,32 +1,26 @@
 const textFields = [
-  { label: "Your first name", required: true },
-  { label: "Your last name", required: true },
-  { label: "Email address", required: true, type: "email" },
-  { label: "Name of your business", required: true },
-  { label: "Your website address" },
-  { label: "Your social media handles" },
-  { label: "Location of your business", required: true, placeholder: "Country / City" },
-  { label: "Project deadline and why?", placeholder: "For example, do you have a launch date?" }
-];
-
-const selectFields = [
-  "How long have you been in business?",
-  "Which services are you interested in?",
-  "What is the goal for your branding?",
-  "What are you prepared to invest in this project?"
+  { label: "Name or nickname", jp: "お名前 / ニックネーム", required: true },
+  { label: "Email address", jp: "メールアドレス", required: true, type: "email" },
+  { label: "Business or project name", jp: "事業名 / プロジェクト名", required: true },
+  { label: "Website address", jp: "ウェブサイト" },
+  { label: "Location", jp: "所在地", required: true, placeholder: "Country / City" },
+  { label: "Project deadline", jp: "ご希望の公開時期", placeholder: "For example, do you have a launch date?" }
 ];
 
 const longFields = [
   {
-    label: "Tell me a little about your business",
+    label: "Tell me about your business or idea",
+    jp: "事業やアイデアについて教えてください",
     placeholder: "What do you do? Who do you serve? What do you sell?"
   },
   {
     label: "What problem are you looking to overcome?",
+    jp: "今いちばん整理したい課題は何ですか？",
     placeholder: "Tell me what is not making sense yet."
   },
   {
     label: "Anything else you would like to share?",
+    jp: "その他共有したいことはありますか？",
     placeholder: "Share links, notes, or context that would help."
   }
 ];
@@ -86,7 +80,7 @@ export default function ContactPage() {
             {textFields.map((field) => (
               <label key={field.label} className="block">
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
-                  {field.label}
+                  {field.label} / {field.jp}
                   <RequiredMark show={field.required} />
                 </span>
                 <input
@@ -98,28 +92,10 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            {selectFields.map((label) => (
-              <label key={label} className="block">
-                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
-                  {label}
-                  <RequiredMark show />
-                </span>
-                <select className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30">
-                  <option>Select</option>
-                  <option>Brand identity</option>
-                  <option>Website design</option>
-                  <option>Packaging design</option>
-                  <option>Creative direction</option>
-                </select>
-              </label>
-            ))}
-          </div>
-
           {longFields.map((field) => (
             <label key={field.label} className="block">
               <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
-                {field.label}
+                {field.label} / {field.jp}
               </span>
               <textarea
                 className="min-h-32 w-full border border-ink bg-white px-3 py-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
