@@ -16,8 +16,10 @@ const config: Config = {
         moss: "#4d5a43",
         dusk: "#313c55",
         bubblegum: "#ef66c5",
+        mint: "#19C7A1",
         bookingBlue: "#547ADD",
         titleBlue: "#3C63C8",
+        ember: "#D65F38",
         sunYellow: "#F8D44D",
         plum: "#92165c",
         blush: "#f2e7e8"

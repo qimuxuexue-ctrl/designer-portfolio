@@ -1,43 +1,155 @@
+const textFields = [
+  { label: "Your first name", required: true },
+  { label: "Your last name", required: true },
+  { label: "Email address", required: true, type: "email" },
+  { label: "Name of your business", required: true },
+  { label: "Your website address" },
+  { label: "Your social media handles" },
+  { label: "Location of your business", required: true, placeholder: "Country / City" },
+  { label: "Project deadline and why?", placeholder: "For example, do you have a launch date?" }
+];
+
+const selectFields = [
+  "How long have you been in business?",
+  "Which services are you interested in?",
+  "What is the goal for your branding?",
+  "What are you prepared to invest in this project?"
+];
+
+const longFields = [
+  {
+    label: "Tell me a little about your business",
+    placeholder: "What do you do? Who do you serve? What do you sell?"
+  },
+  {
+    label: "What problem are you looking to overcome?",
+    placeholder: "Tell me what is not making sense yet."
+  },
+  {
+    label: "Anything else you would like to share?",
+    placeholder: "Share links, notes, or context that would help."
+  }
+];
+
 export const metadata = {
   title: "Hinna | Make things make sense"
 };
 
+function RequiredMark({ show }: { show?: boolean }) {
+  return show ? <span className="text-ember">*</span> : null;
+}
+
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-7xl px-5 py-12 md:px-8 md:py-20">
-      <div className="grid gap-12 md:grid-cols-[1fr_0.75fr]">
-        <div>
-          <p className="mb-5 text-sm uppercase tracking-[0.18em] text-ink/55">
-            Contact
-          </p>
-          <h1 className="font-serif text-6xl leading-[0.9] md:text-8xl">
-            Tell us what you are building.
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-8 text-ink/65">
-            This page is ready for your preferred contact method. For now, use the
-            placeholder email and project details list below.
-          </p>
+    <main className="bg-white text-ink">
+      <section className="bg-titleBlue px-5 pb-20 pt-16 text-center md:px-8 md:pb-28 md:pt-24">
+        <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
+          Contact me
+        </p>
+        <h1 className="mx-auto max-w-5xl font-display text-6xl font-black uppercase leading-[0.82] text-sunYellow md:text-8xl lg:text-9xl">
+          Together
+          <br />
+          we&apos;ll make
+          <br />
+          things clear
+        </h1>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
+        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
+          <h2 className="font-display text-4xl font-black leading-[0.95] text-titleBlue md:text-5xl">
+            I&apos;d love to hear about your project.
+          </h2>
+          <div className="space-y-5 text-base font-medium leading-8">
+            <p>
+              Use this form to share the details of your brand, website, packaging,
+              or studio project. The more context you include, the easier it is to
+              understand what needs to make sense.
+            </p>
+            <p>
+              If the project feels aligned, I&apos;ll follow up by email to arrange
+              a discovery call and talk through scope, timing, and next steps.
+            </p>
+            <p className="text-titleBlue">You can usually expect a reply within 2 business days.</p>
+          </div>
         </div>
-        <div className="border-t border-ink/15 pt-6 md:mt-24">
-          <a className="text-3xl transition hover:text-clay" href="mailto:hello@example.com">
+
+        <div className="mt-12 rounded-none border border-sunYellow bg-sunYellow/20 px-5 py-4 text-sm font-semibold text-titleBlue">
+          This form is currently a front-end mockup. Replace it with your preferred form
+          service when you are ready to collect enquiries.
+        </div>
+
+        <form className="mt-8 space-y-6">
+          <div className="grid gap-5 md:grid-cols-2">
+            {textFields.map((field) => (
+              <label key={field.label} className="block">
+                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
+                  {field.label}
+                  <RequiredMark show={field.required} />
+                </span>
+                <input
+                  className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                  placeholder={field.placeholder}
+                  type={field.type ?? "text"}
+                />
+              </label>
+            ))}
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            {selectFields.map((label) => (
+              <label key={label} className="block">
+                <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
+                  {label}
+                  <RequiredMark show />
+                </span>
+                <select className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30">
+                  <option>Select</option>
+                  <option>Brand identity</option>
+                  <option>Website design</option>
+                  <option>Packaging design</option>
+                  <option>Creative direction</option>
+                </select>
+              </label>
+            ))}
+          </div>
+
+          {longFields.map((field) => (
+            <label key={field.label} className="block">
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
+                {field.label}
+              </span>
+              <textarea
+                className="min-h-32 w-full border border-ink bg-white px-3 py-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                placeholder={field.placeholder}
+              />
+            </label>
+          ))}
+
+          <div className="flex justify-end">
+            <button
+              className="bg-sunYellow px-10 py-4 text-sm font-black text-titleBlue transition hover:bg-titleBlue hover:text-white"
+              type="button"
+            >
+              Let&apos;s do this!
+            </button>
+          </div>
+        </form>
+
+        <div className="mt-20 border-t border-ink pt-10 text-center">
+          <p className="font-display text-3xl font-black text-titleBlue">Hinna</p>
+          <a className="mt-2 block font-semibold hover:text-titleBlue" href="mailto:hello@example.com">
             hello@example.com
           </a>
-          <dl className="mt-10 space-y-6 text-sm uppercase tracking-[0.14em]">
-            <div className="flex justify-between gap-6 border-t border-ink/10 pt-4">
-              <dt className="text-ink/50">Location</dt>
-              <dd>Available globally</dd>
-            </div>
-            <div className="flex justify-between gap-6 border-t border-ink/10 pt-4">
-              <dt className="text-ink/50">Focus</dt>
-              <dd>Brand / Web / Packaging</dd>
-            </div>
-            <div className="flex justify-between gap-6 border-t border-ink/10 pt-4">
-              <dt className="text-ink/50">Bookings</dt>
-              <dd>Open for 2026</dd>
-            </div>
-          </dl>
+          <p className="mt-3 text-sm font-medium">
+            Brand, web, and packaging design for people building thoughtful things.
+          </p>
+          <div className="mt-6 flex justify-center gap-7 text-2xl">
+            <span className="text-ember">ig</span>
+            <span className="text-mint">p</span>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
