@@ -13,15 +13,17 @@ export function Marquee() {
       className="block overflow-hidden bg-bookingBlue py-2 text-white transition brightness-100 hover:brightness-95"
       aria-label="Contact me"
     >
-      <div className="marquee-track flex w-max gap-10 whitespace-nowrap text-base font-medium">
+      <div className="marquee-track flex w-max gap-10 whitespace-nowrap text-base font-medium leading-none">
         {Array.from({ length: 8 }).map((_, groupIndex) =>
           messages.map((message) => (
             <span
               key={`${groupIndex}-${message}`}
-              className="flex items-center gap-10"
+              className="inline-flex items-center gap-10 leading-none"
             >
-              {message}
-              <span className="font-sans text-lg">*</span>
+              <span className="inline-flex items-center leading-none">{message}</span>
+              <span className="inline-flex h-4 items-center font-sans text-base leading-none">
+                *
+              </span>
             </span>
           ))
         )}
