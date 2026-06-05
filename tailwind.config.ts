@@ -16,6 +16,8 @@ const config: Config = {
         moss: "#4d5a43",
         dusk: "#313c55",
         bubblegum: "#ef66c5",
+        bookingBlue: "#547ADD",
+        titleBlue: "#3C63C8",
         plum: "#92165c",
         blush: "#f2e7e8"
       },
