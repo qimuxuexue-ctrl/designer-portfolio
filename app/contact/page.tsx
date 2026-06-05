@@ -42,17 +42,19 @@ function RequiredMark({ show }: { show?: boolean }) {
 export default function ContactPage() {
   return (
     <main className="bg-white text-ink">
-      <section className="bg-titleBlue px-5 pb-20 pt-16 text-center md:px-8 md:pb-28 md:pt-24">
-        <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
-          Contact me
-        </p>
-        <h1 className="mx-auto max-w-5xl font-display text-6xl font-black uppercase leading-[0.82] text-sunYellow md:text-8xl lg:text-9xl">
-          Together
-          <br />
-          we&apos;ll make
-          <br />
-          things clear
-        </h1>
+      <section className="flex min-h-[72vh] flex-col justify-end bg-titleBlue px-5 pb-14 pt-16 text-center md:min-h-[78vh] md:px-8 md:pb-20 md:pt-24">
+        <div>
+          <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
+            Contact me
+          </p>
+          <h1 className="mx-auto max-w-6xl font-display text-[4rem] font-black uppercase leading-[0.82] text-sunYellow md:text-8xl lg:text-[8.5rem]">
+            Let&apos;s make
+            <br />
+            your idea
+            <br />
+            make sense
+          </h1>
+        </div>
       </section>
 
       <section className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
