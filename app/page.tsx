@@ -8,13 +8,13 @@ export default function Home() {
       <Marquee />
 
       <section className="px-4 pb-24 pt-14 md:px-8 md:pb-40 md:pt-16">
-        <h1 className="relative z-10 mx-auto mb-8 max-w-5xl text-center font-display text-[4.1rem] font-black uppercase leading-[0.78] text-titleBlue md:-mb-6 md:text-[7.35rem] lg:-mb-8 lg:text-[8.55rem]">
+        <h1 className="relative z-0 mx-auto mb-8 max-w-5xl text-center font-display text-[4.1rem] font-black uppercase leading-[0.78] text-titleBlue md:mb-[clamp(-1.75rem,-2.4vw,-0.75rem)] md:text-[7.35rem] lg:text-[8.55rem]">
           Recent
           <br />
           Projects
         </h1>
 
-        <div className="mx-auto grid max-w-[1040px] gap-14 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
+        <div className="relative z-10 mx-auto grid max-w-[1040px] gap-14 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
           {projects.slice(0, 3).map((project, index) => (
             <div
               key={project.slug}
