@@ -145,10 +145,6 @@ export default function ContactPage() {
             qimuxuexue@gmail.com
           </a>
           <p className="mt-3 text-sm font-medium">{services}</p>
-          <div className="mt-6 flex justify-center gap-7 text-2xl">
-            <span className="text-ember">ig</span>
-            <span className="text-mint">p</span>
-          </div>
         </div>
       </section>
     </main>
