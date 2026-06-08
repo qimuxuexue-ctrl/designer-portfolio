@@ -19,9 +19,11 @@ export function Footer() {
           Email me
         </Link>
         <div className="mt-12 text-base font-medium leading-7 text-white">
-          <p>+1 400 403 077</p>
-          <p>Based in Melbourne, Australia.</p>
-          <p>Working with clients in Australia and globally.</p>
+          <a className="transition hover:text-sunYellow" href="mailto:qimuxuexue@gmail.com">
+            qimuxuexue@gmail.com
+          </a>
+          <p>Based in Tokyo, Japan.</p>
+          <p>Working with clients globally.</p>
         </div>
         <div className="mt-7 flex justify-center gap-8 text-white">
           <SocialIconLinks colorClassName="text-white hover:text-sunYellow" />
