@@ -49,7 +49,7 @@ export function Header() {
             alt="Hinna"
             fill
             priority
-            className="scale-150 object-contain"
+            className="scale-[2.25] object-contain"
           />
         </Link>
 
