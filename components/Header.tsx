@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <header className="relative z-50 bg-white">
-      <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-2 md:px-12 md:py-3">
+      <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-3 md:px-12 md:py-4">
         <nav className="hidden items-center gap-20 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] text-ink md:flex">
           {leftLinks.map((link) => (
             <Link
