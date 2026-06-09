@@ -3,7 +3,7 @@ import { SocialIconLinks } from "@/components/SocialIconLinks";
 
 export function Footer() {
   return (
-    <footer className="bg-bookingBlue text-center text-white">
+    <footer className="w-full overflow-hidden bg-bookingBlue text-center text-white">
       <div className="mx-auto max-w-5xl px-6 py-20 md:py-24">
         <h2 className="font-display text-4xl font-black text-sunYellow md:text-5xl">
           Let&apos;s chat!
@@ -13,7 +13,7 @@ export function Footer() {
           have about my work.
         </p>
         <Link
-          className="mx-auto mt-9 inline-flex min-w-64 justify-center bg-sunYellow px-12 py-4 text-xs font-black uppercase tracking-[0.55em] text-titleBlue transition hover:brightness-95"
+          className="mx-auto mt-9 inline-flex w-full max-w-64 justify-center bg-sunYellow px-8 py-4 text-xs font-black uppercase tracking-[0.45em] text-titleBlue transition hover:brightness-95 md:px-12 md:tracking-[0.55em]"
           href="/contact"
         >
           Email me
