@@ -30,13 +30,9 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="overflow-hidden bg-[#f8eedf] text-titleBlue">
-      <section className="about-reveal mx-auto grid max-w-[1120px] px-5 pb-14 pt-12 md:min-h-[760px] md:grid-cols-[140px_1fr_140px] md:px-8 md:pb-24 md:pt-20">
-        <p className="hidden self-end text-[10px] font-semibold uppercase tracking-[0.34em] text-ember md:block">
-          About
-        </p>
-
-        <div className="relative flex flex-col items-center">
+    <main className="overflow-hidden bg-white text-titleBlue">
+      <section className="about-reveal mx-auto max-w-[1120px] px-5 pb-14 pt-12 md:min-h-[760px] md:px-8 md:pb-24 md:pt-20">
+        <div className="relative mx-auto flex max-w-[820px] flex-col items-center">
           <h1 className="relative z-10 max-w-[760px] text-center font-display text-[clamp(3.4rem,9vw,8.2rem)] font-black leading-[0.82]">
             Turning loose
             <br />
@@ -167,38 +163,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="about-reveal mx-auto max-w-[1120px] px-5 pb-20 md:px-8 md:pb-28">
+      <section className="about-reveal mx-auto grid max-w-[1120px] gap-10 px-5 pb-20 md:grid-cols-[1fr_320px] md:px-8 md:pb-28">
         <p className="max-w-[900px] font-display text-[clamp(2.5rem,5.4vw,5.8rem)] font-black leading-[0.9]">
           When I&apos;m not designing, I&apos;m collecting references, comparing tiny
           layout decisions, testing visual rhythms, and saving ideas that help a brand
           feel less confusing.
         </p>
-        <div className="mt-10 h-14 max-w-[720px] bg-titleBlue p-3">
-          <div className="h-full w-full bg-sunYellow/90" />
+        <div className="self-end border-l-4 border-sunYellow bg-titleBlue px-7 py-8 text-white">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.34em] text-sunYellow">
+            Currently
+          </p>
+          <p className="mt-5 text-sm font-medium leading-7">
+            Building visual systems for brand, UIUX, web, SNS ads, ecommerce banners,
+            graphic design, packaging, and exhibition.
+          </p>
         </div>
       </section>
 
-      <section className="about-reveal mx-auto grid max-w-[1120px] border-t border-titleBlue/20 px-5 py-14 text-sm font-semibold text-ink/70 md:grid-cols-[140px_1fr_auto] md:px-8 md:py-20">
+      <section className="about-reveal mx-auto grid max-w-[1120px] border-t border-titleBlue/20 px-5 py-14 text-sm font-semibold text-ink/70 md:grid-cols-[140px_1fr_280px] md:px-8 md:py-20">
         <p className="mb-8 text-[10px] uppercase tracking-[0.34em] text-ember md:mb-0">
           Contact
         </p>
-        <div className="space-y-2">
-          <Link className="block transition hover:text-titleBlue" href="mailto:qimuxuexue@gmail.com">
-            Email
+        <div>
+          <h2 className="max-w-[560px] font-display text-[clamp(2.3rem,4.5vw,5rem)] font-black leading-[0.9] text-titleBlue">
+            Have an idea that needs shape?
+          </h2>
+          <p className="mt-6 max-w-[520px] text-sm font-medium leading-7 text-ink/70">
+            Tell me what you are making, what feels unclear, and where the design needs
+            to work. I&apos;ll help turn it into something people can understand.
+          </p>
+        </div>
+        <div className="mt-10 flex flex-col items-start gap-4 md:mt-0 md:items-end md:self-end">
+          <Link
+            href="/contact"
+            className="bg-sunYellow px-8 py-4 text-[10px] font-black uppercase tracking-[0.34em] text-titleBlue transition hover:bg-titleBlue hover:text-white"
+          >
+            Contact me
           </Link>
-          <Link className="block transition hover:text-titleBlue" href="/contact">
-            Inquiry form
-          </Link>
-          <Link className="block transition hover:text-titleBlue" href="/work">
-            Work
+          <Link
+            className="text-[11px] uppercase tracking-[0.24em] text-titleBlue transition hover:text-ember"
+            href="mailto:qimuxuexue@gmail.com"
+          >
+            qimuxuexue@gmail.com
           </Link>
         </div>
-        <Link
-          href="/contact"
-          className="mt-10 self-end justify-self-start text-[10px] uppercase tracking-[0.34em] text-titleBlue transition hover:text-ember md:mt-0 md:justify-self-end"
-        >
-          Contact me
-        </Link>
       </section>
     </main>
   );
