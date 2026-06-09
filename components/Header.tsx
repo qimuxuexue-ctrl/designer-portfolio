@@ -40,7 +40,7 @@ export function Header() {
 
         <Link
           href="/"
-          className="relative h-12 w-36 justify-self-start transition hover:opacity-80 md:h-14 md:w-44 md:justify-self-center"
+          className="relative h-20 w-64 justify-self-start transition hover:opacity-80 md:h-24 md:w-80 md:justify-self-center"
           onClick={() => setOpen(false)}
           aria-label="Hinna home"
         >
