@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
+
+const homeLink = { href: "/", label: "Home" };
 
 const leftLinks = [
   { href: "/about", label: "About" },
@@ -17,10 +18,9 @@ const rightLinks = [
   { href: "/contact", label: "Contact me" }
 ];
 
-const mobileLinks = [...leftLinks, ...rightLinks];
+const mobileLinks = [homeLink, ...leftLinks, ...rightLinks];
 
 export function Header() {
-  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   return (
@@ -81,22 +81,45 @@ export function Header() {
         </button>
       </div>
 
-      {open ? (
-        <nav className="border-t border-ink/10 px-7 py-7 md:hidden">
-          <div className="flex flex-col gap-4 font-sans text-2xl font-semibold uppercase text-ink">
-            {mobileLinks.map((link) => (
-              <Link
-                key={`${link.href}-${link.label}-mobile`}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="transition hover:text-titleBlue"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      ) : null}
+      <nav
+        className={`fixed inset-0 z-[60] flex flex-col bg-titleBlue px-8 py-8 text-white transition duration-500 ease-out md:hidden ${
+          open
+            ? "translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-full opacity-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <button
+          className="absolute right-7 top-7 flex h-10 w-10 items-center justify-center"
+          aria-label="Close navigation"
+          onClick={() => setOpen(false)}
+        >
+          <span className="absolute h-0.5 w-8 rotate-45 bg-white" />
+          <span className="absolute h-0.5 w-8 -rotate-45 bg-white" />
+        </button>
+
+        <div className="flex flex-1 flex-col items-center justify-center gap-9 font-sans text-sm font-semibold uppercase tracking-[0.32em]">
+          {mobileLinks.map((link) => (
+            <Link
+              key={`${link.href}-${link.label}-mobile`}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="transition hover:text-sunYellow"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="flex justify-center pb-8">
+          <SocialIconLinks
+            colorClassName="text-white hover:text-sunYellow"
+            gapClassName="gap-8"
+            instagramClassName="h-7 w-7"
+            mailClassName="h-7 w-7"
+          />
+        </div>
+      </nav>
     </header>
   );
 }
