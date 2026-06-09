@@ -25,7 +25,7 @@ export function Header() {
 
   return (
     <header className="relative z-50 bg-white">
-      <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-6 md:px-12 md:py-8">
+      <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-4 md:px-12 md:py-5">
         <nav className="hidden items-center gap-20 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] text-ink md:flex">
           {leftLinks.map((link) => (
             <Link
@@ -40,7 +40,7 @@ export function Header() {
 
         <Link
           href="/"
-          className="relative h-20 w-64 justify-self-start transition hover:opacity-80 md:h-24 md:w-80 md:justify-self-center"
+          className="relative h-14 w-64 justify-self-start transition hover:opacity-80 md:h-16 md:w-80 md:justify-self-center"
           onClick={() => setOpen(false)}
           aria-label="Hinna home"
         >
