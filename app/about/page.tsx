@@ -1,21 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const services = [
-  "brand",
-  "UIUX",
-  "web",
-  "SNS ads",
-  "ecommerce banners",
-  "graphic design",
-  "packaging",
-  "exhibition"
-];
-
-const experience = [
-  { role: "Brand systems", detail: "Visual direction, identity foundations, launch assets" },
-  { role: "Digital design", detail: "Web pages, product flows, campaign surfaces" },
-  { role: "Commercial graphics", detail: "Ads, banners, packaging, and event visuals" }
+const resumeItems = [
+  {
+    title: "Brand, UIUX, web, packaging, and campaign design",
+    meta: "Independent studio practice",
+    year: "Now"
+  },
+  {
+    title: "Visual systems for thoughtful products and services",
+    meta: "Identity, digital, ecommerce, and launch materials",
+    year: "2024"
+  },
+  {
+    title: "Design direction across digital and physical touchpoints",
+    meta: "Brand foundations, web pages, ads, exhibitions",
+    year: "2023"
+  },
+  {
+    title: "Ongoing research in clarity, rhythm, and useful beauty",
+    meta: "References, systems, interface details, visual storytelling",
+    year: "Always"
+  }
 ];
 
 export const metadata = {
@@ -24,70 +30,59 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-white text-ink">
-      <section className="mx-auto max-w-7xl px-5 pb-10 pt-16 md:px-8 md:pb-16 md:pt-24">
-        <p className="mb-7 text-xs font-semibold uppercase tracking-[0.45em] text-titleBlue">
-          About Hinna
+    <main className="overflow-hidden bg-[#f8eedf] text-titleBlue">
+      <section className="about-reveal mx-auto grid max-w-[1120px] px-5 pb-14 pt-12 md:min-h-[760px] md:grid-cols-[140px_1fr_140px] md:px-8 md:pb-24 md:pt-20">
+        <p className="hidden self-end text-[10px] font-semibold uppercase tracking-[0.34em] text-ember md:block">
+          About
         </p>
-        <h1 className="max-w-6xl font-display text-6xl font-black uppercase leading-[0.82] text-titleBlue md:text-8xl lg:text-[8.5rem]">
-          Turning loose
-          <br />
-          ideas into
-          <br />
-          clear visuals
-        </h1>
-      </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-[0.9fr_1.1fr] md:px-8 md:py-16">
-        <div className="relative aspect-[4/3] overflow-hidden bg-bookingBlue">
-          <Image
-            src="/images/about-statement.svg"
-            alt="Abstract desk placeholder"
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="flex flex-col justify-center border-y border-ink py-8 md:px-8">
-          <p className="text-2xl font-semibold leading-10 text-titleBlue md:text-4xl md:leading-[1.15]">
-            Good design is not just decoration. It is a way to make the next step
-            easier to understand.
-          </p>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-[0.28em] text-ember">
-            Make things make sense
-          </p>
-        </div>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[1.1fr_0.9fr] md:px-8 md:py-20">
-        <div>
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.4em] text-titleBlue">
-            About me
-          </p>
-          <h2 className="font-display text-4xl font-black uppercase leading-[0.95] text-titleBlue md:text-6xl">
-            I help brands,
+        <div className="relative flex flex-col items-center">
+          <h1 className="relative z-10 max-w-[760px] text-center font-display text-[clamp(3.4rem,9vw,8.2rem)] font-black leading-[0.82]">
+            Turning loose
             <br />
-            shops, and makers
+            ideas into
             <br />
-            organize their visual world.
-          </h2>
-        </div>
-        <div className="space-y-6 text-base font-medium leading-8 md:text-lg">
-          <p>
-            Hinna is a design practice focused on clear, flexible visual systems for
-            people building thoughtful products and services.
-          </p>
-          <p>
-            The work moves across brand, UIUX, web, ads, packaging, ecommerce visuals,
-            and exhibition graphics, with a focus on making each piece feel connected.
-          </p>
-          <p className="text-titleBlue">
-            Based in Tokyo, working with clients globally.
+            clear systems
+          </h1>
+
+          <div className="about-float relative -mt-5 aspect-[4/5] w-[76%] max-w-[390px] overflow-hidden bg-sunYellow shadow-[0_18px_50px_rgba(60,99,200,0.18)] md:-mt-10">
+            <Image
+              src="/images/about-statement.svg"
+              alt="Studio mood placeholder"
+              fill
+              priority
+              className="object-cover"
+            />
+            <p className="absolute inset-x-5 top-5 font-display text-[clamp(2.8rem,7vw,5rem)] font-black leading-[0.82] text-white">
+              Make
+              <br />
+              sense,
+              <br />
+              not
+              <br />
+              noise.
+            </p>
+          </div>
+
+          <p className="mt-7 max-w-[420px] text-center text-sm font-medium leading-7 text-ink/70">
+            A calm visual system gives people a place to land, a path to follow, and
+            a reason to remember you.
           </p>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:grid-cols-2 md:px-8 md:py-16">
-        <div className="relative aspect-[4/5] overflow-hidden bg-sunYellow">
+      <section className="about-reveal mx-auto grid max-w-[1120px] border-t border-titleBlue/20 px-5 py-14 md:grid-cols-[140px_1fr] md:px-8 md:py-24">
+        <p className="mb-8 text-[10px] font-semibold uppercase tracking-[0.34em] text-ember md:mb-0">
+          Story
+        </p>
+        <h2 className="max-w-[780px] font-display text-[clamp(2.55rem,5.6vw,5.4rem)] font-black leading-[0.9]">
+          I&apos;m Hinna, a designer focused on making brands, interfaces, and campaign
+          visuals feel easier to understand, easier to use, and easier to trust.
+        </h2>
+      </section>
+
+      <section className="about-reveal mx-auto grid max-w-[1120px] gap-6 px-5 py-8 md:grid-cols-[0.9fr_1.25fr] md:items-end md:gap-10 md:px-8 md:py-16">
+        <div className="relative aspect-[4/5] overflow-hidden bg-bookingBlue md:translate-y-20">
           <Image
             src="/images/about-portrait.svg"
             alt="Portrait placeholder"
@@ -95,73 +90,112 @@ export default function AboutPage() {
             className="object-cover"
           />
         </div>
-        <div className="flex flex-col justify-center">
-          <p className="mb-6 text-xs font-semibold uppercase tracking-[0.4em] text-titleBlue">
-            Approach
-          </p>
-          <h2 className="font-display text-5xl font-black uppercase leading-[0.9] text-titleBlue md:text-7xl">
-            Clarity
+        <div className="relative aspect-[4/5] overflow-hidden bg-white">
+          <Image
+            src="/images/project-soft-archive.svg"
+            alt="Reference object placeholder"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </section>
+
+      <section className="about-reveal mx-auto grid max-w-[1120px] gap-10 px-5 py-16 md:grid-cols-[140px_1fr] md:px-8 md:py-28">
+        <p className="text-[10px] font-semibold uppercase tracking-[0.34em] text-ember">
+          Approach
+        </p>
+        <div>
+          <h2 className="max-w-[860px] font-display text-[clamp(3rem,7vw,7rem)] font-black uppercase leading-[0.84]">
+            Persistence
             <br />
-            before style
+            & motivation
           </h2>
-          <div className="mt-8 space-y-5 text-base font-medium leading-8">
+          <div className="mt-10 grid gap-8 text-sm font-medium leading-7 text-ink/72 md:grid-cols-2 md:gap-14">
             <p>
-              Before choosing colors, type, or layouts, I look at what the design needs
-              to explain, sell, support, or simplify.
+              I start by listening for the part that is still tangled. The goal is not
+              to decorate the idea, but to understand what the design needs to explain
+              before it becomes visible.
             </p>
             <p>
-              Then I build a visual direction that can stretch across touchpoints without
-              losing the original idea.
+              From there, I shape a visual direction that can move across brand, web,
+              ads, packaging, ecommerce, and printed surfaces without losing its center.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-12 px-5 py-12 md:grid-cols-2 md:px-8 md:py-20">
-        <div>
-          <h2 className="mb-8 font-display text-4xl font-black uppercase text-titleBlue">
-            Services
-          </h2>
-          <div className="grid gap-3">
-            {services.map((service) => (
-              <div
-                key={service}
-                className="border-t border-ink py-4 text-xl font-semibold"
-              >
-                {service}
+      <section className="about-reveal mx-auto grid max-w-[1120px] border-y border-titleBlue/20 px-5 py-12 md:grid-cols-[140px_1fr] md:px-8 md:py-16">
+        <p className="mb-7 text-[10px] font-semibold uppercase tracking-[0.34em] text-ember md:mb-0">
+          Experience
+        </p>
+        <div className="divide-y divide-titleBlue/20">
+          {resumeItems.map((item) => (
+            <div
+              key={item.title}
+              className="grid gap-3 py-5 text-sm font-medium leading-6 text-ink/75 md:grid-cols-[1fr_auto]"
+            >
+              <div>
+                <h3 className="text-base font-semibold leading-6 text-titleBlue">
+                  {item.title}
+                </h3>
+                <p>{item.meta}</p>
               </div>
-            ))}
-          </div>
-        </div>
-        <div>
-          <h2 className="mb-8 font-display text-4xl font-black uppercase text-titleBlue">
-            Experience
-          </h2>
-          <div className="space-y-6">
-            {experience.map((item) => (
-              <div key={item.role} className="border-t border-ink pt-5">
-                <h3 className="text-2xl font-semibold text-titleBlue">{item.role}</h3>
-                <p className="mt-2 leading-7">{item.detail}</p>
-              </div>
-            ))}
-          </div>
+              <p className="text-left text-xs font-semibold uppercase tracking-[0.22em] text-ember md:text-right">
+                {item.year}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="bg-titleBlue px-5 py-16 text-center text-white md:px-8 md:py-24">
-        <p className="mx-auto max-w-4xl font-display text-4xl font-black uppercase leading-[0.95] text-sunYellow md:text-6xl">
-          When I&apos;m not designing, I&apos;m collecting references, testing small
-          ideas, and looking for better ways to explain things visually.
-        </p>
+      <section className="about-reveal mx-auto grid max-w-[1120px] gap-4 px-5 py-16 md:grid-cols-[1.1fr_0.85fr] md:px-8 md:py-24">
+        <div className="relative aspect-[4/5] overflow-hidden bg-mint md:max-w-[500px]">
+          <Image
+            src="/images/project-northline.svg"
+            alt="Digital work placeholder"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <div className="relative aspect-[4/3] overflow-hidden bg-sunYellow md:mt-14">
+          <Image
+            src="/images/project-earth-house.svg"
+            alt="Object study placeholder"
+            fill
+            className="object-cover"
+          />
+        </div>
       </section>
 
-      <section className="mx-auto max-w-5xl px-5 py-16 text-center md:px-8 md:py-24">
-        <p className="font-display text-4xl font-black text-titleBlue md:text-5xl">
-          Have an idea that needs shape?
+      <section className="about-reveal mx-auto max-w-[1120px] px-5 pb-20 md:px-8 md:pb-28">
+        <p className="max-w-[900px] font-display text-[clamp(2.5rem,5.4vw,5.8rem)] font-black leading-[0.9]">
+          When I&apos;m not designing, I&apos;m collecting references, comparing tiny
+          layout decisions, testing visual rhythms, and saving ideas that help a brand
+          feel less confusing.
         </p>
+        <div className="mt-10 h-14 max-w-[720px] bg-titleBlue p-3">
+          <div className="h-full w-full bg-sunYellow/90" />
+        </div>
+      </section>
+
+      <section className="about-reveal mx-auto grid max-w-[1120px] border-t border-titleBlue/20 px-5 py-14 text-sm font-semibold text-ink/70 md:grid-cols-[140px_1fr_auto] md:px-8 md:py-20">
+        <p className="mb-8 text-[10px] uppercase tracking-[0.34em] text-ember md:mb-0">
+          Contact
+        </p>
+        <div className="space-y-2">
+          <Link className="block transition hover:text-titleBlue" href="mailto:qimuxuexue@gmail.com">
+            Email
+          </Link>
+          <Link className="block transition hover:text-titleBlue" href="/contact">
+            Inquiry form
+          </Link>
+          <Link className="block transition hover:text-titleBlue" href="/work">
+            Work
+          </Link>
+        </div>
         <Link
           href="/contact"
-          className="mt-8 inline-flex bg-sunYellow px-10 py-4 text-sm font-black uppercase tracking-[0.32em] text-titleBlue transition hover:bg-titleBlue hover:text-white"
+          className="mt-10 self-end justify-self-start text-[10px] uppercase tracking-[0.34em] text-titleBlue transition hover:text-ember md:mt-0 md:justify-self-end"
         >
           Contact me
         </Link>

@@ -69,3 +69,39 @@ a {
   transform: scale(1.025);
   filter: saturate(1.08);
 }
+
+.about-reveal {
+  animation: aboutReveal 720ms ease both;
+}
+
+.about-float {
+  animation: aboutFloat 7s ease-in-out infinite;
+}
+
+@keyframes aboutReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes aboutFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-reveal,
+  .about-float {
+    animation: none;
+  }
+}
