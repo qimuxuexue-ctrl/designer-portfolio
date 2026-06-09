@@ -40,7 +40,7 @@ export function Header() {
 
         <Link
           href="/"
-          className="relative h-12 w-64 justify-self-start transition hover:opacity-80 md:h-12 md:w-80 md:justify-self-center"
+          className="relative z-10 h-12 w-44 justify-self-start transition hover:opacity-80 md:h-12 md:w-80 md:justify-self-center"
           onClick={() => setOpen(false)}
           aria-label="Hinna home"
         >
@@ -49,7 +49,7 @@ export function Header() {
             alt="Hinna"
             fill
             priority
-            className="scale-[2.25] object-contain"
+            className="pointer-events-none scale-[2.25] object-contain"
           />
         </Link>
 
@@ -72,7 +72,7 @@ export function Header() {
         </nav>
 
         <button
-          className="group col-start-3 inline-flex h-9 w-9 justify-self-end flex-col items-center justify-center gap-1.5 md:hidden"
+          className="group relative z-20 col-start-3 inline-flex h-9 w-9 justify-self-end flex-col items-center justify-center gap-1.5 md:hidden"
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
         >
@@ -82,7 +82,7 @@ export function Header() {
       </div>
 
       <nav
-        className={`fixed inset-0 z-[60] flex flex-col bg-titleBlue px-8 py-8 text-white transition duration-500 ease-out md:hidden ${
+        className={`fixed inset-0 z-[100] flex flex-col bg-titleBlue px-8 py-8 text-white transition duration-500 ease-out md:hidden ${
           open
             ? "translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-full opacity-0"
