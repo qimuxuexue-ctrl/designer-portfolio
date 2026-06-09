@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { SocialIconLinks } from "@/components/SocialIconLinks";
@@ -39,10 +40,17 @@ export function Header() {
 
         <Link
           href="/"
-          className="justify-self-start font-sans text-[20px] font-normal uppercase tracking-[0.32em] text-ink transition hover:text-titleBlue md:justify-self-center md:text-2xl"
+          className="relative h-12 w-36 justify-self-start transition hover:opacity-80 md:h-14 md:w-44 md:justify-self-center"
           onClick={() => setOpen(false)}
+          aria-label="Hinna home"
         >
-          Halo Form Studio
+          <Image
+            src="/images/hinna-logo.svg"
+            alt="Hinna"
+            fill
+            priority
+            className="object-contain"
+          />
         </Link>
 
         <nav className="hidden items-center justify-end gap-12 font-sans text-[11px] font-semibold uppercase tracking-[0.44em] text-ink md:flex">

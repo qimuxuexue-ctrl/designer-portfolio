@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const textFields = [
   {
     label: "Name or nickname",
@@ -137,7 +139,14 @@ export default function ContactPage() {
         </form>
 
         <div className="mt-20 border-t border-ink pt-10 text-center">
-          <p className="font-display text-3xl font-black text-titleBlue">Hinna</p>
+          <div className="relative mx-auto h-16 w-40">
+            <Image
+              src="/images/hinna-logo.svg"
+              alt="Hinna"
+              fill
+              className="object-contain"
+            />
+          </div>
           <a
             className="mt-2 block font-semibold hover:text-titleBlue"
             href="mailto:qimuxuexue@gmail.com"
