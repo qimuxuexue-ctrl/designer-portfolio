@@ -76,6 +76,10 @@ a {
   animation: aboutReveal 720ms ease both;
 }
 
+.project-reveal {
+  animation: projectReveal 760ms ease both;
+}
+
 .about-float {
   animation: aboutFloat 7s ease-in-out infinite;
 }
@@ -101,8 +105,20 @@ a {
   }
 }
 
+@keyframes projectReveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .about-reveal,
+  .project-reveal,
   .about-float {
     animation: none;
   }
