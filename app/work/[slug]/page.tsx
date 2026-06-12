@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getProject, projects } from "@/data/projects";
+import { RelatedProjectsCarousel } from "@/components/RelatedProjectsCarousel";
 
 type ProjectPageProps = {
   params: {
@@ -27,9 +28,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   if (!project) {
     notFound();
   }
-
-  const projectIndex = projects.findIndex((item) => item.slug === project.slug);
-  const nextProject = projects[(projectIndex + 1) % projects.length];
 
   return (
     <main className="overflow-hidden bg-white text-ink">
@@ -217,38 +215,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </section>
 
-      <section className="project-reveal border-t border-ink/15 px-5 py-16 md:px-8 md:py-24">
-        <div className="mx-auto max-w-[1440px]">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-titleBlue">
-            More selected work
-          </p>
-          <Link
-            href={`/work/${nextProject.slug}`}
-            className="group mt-8 grid gap-8 md:grid-cols-[0.85fr_1.15fr] md:items-end"
-          >
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/50">
-                Next project
-              </p>
-              <h2
-                className="mt-4 font-display text-[clamp(3rem,7vw,7rem)] font-black uppercase leading-[0.84] transition group-hover:opacity-70"
-                style={{ color: nextProject.accent }}
-              >
-                {nextProject.title}
-              </h2>
-            </div>
-            <div className="relative aspect-[16/10] overflow-hidden bg-mist">
-              <Image
-                src={nextProject.image}
-                alt={`${nextProject.title} project preview`}
-                fill
-                className="object-cover transition duration-700 group-hover:scale-[1.02]"
-                sizes="(min-width: 768px) 55vw, 100vw"
-              />
-            </div>
-          </Link>
-        </div>
-      </section>
+      <RelatedProjectsCarousel projects={projects} currentSlug={project.slug} />
     </main>
   );
 }
