@@ -5,8 +5,8 @@ export const ja = {
     "nav.work": "実績",
     "nav.journal": "ジャーナル",
     "nav.contact": "お問い合わせ",
-    "home.recent": "最近の",
-    "home.projects": "プロジェクト",
+    "home.recent": "Recent",
+    "home.projects": "Projects",
     "footer.title": "お話ししましょう！",
     "footer.body":
       "ブランドについてぜひお聞かせください。制作に関するご質問もお気軽にどうぞ。",
