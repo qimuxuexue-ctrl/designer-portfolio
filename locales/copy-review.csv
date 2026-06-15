@@ -1,0 +1,4 @@
+key,level,english_source,chinese_draft,chinese_final,japanese_draft,japanese_final,status,notes
+home.hero.subtitle,A,I turn complex information into clear usable design.,,,,複雑な情報を伝わりやすく使いやすいデザインへ整理します。,draft,Example row only
+contact.hero.title,A,Let's make your idea make sense.,让我们把你的想法讲清楚。,,,アイデアを伝わる形に整えましょう。,review,Review tone and line breaks
+project.example.context,C,English project context goes here.,,,,日本語のプロジェクト背景をここに記入します。,draft,Use project slug in the final language pack
