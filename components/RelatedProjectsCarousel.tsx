@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState, type TransitionEvent } from "react";
 import type { Project } from "@/data/projects";
+import { useLanguage } from "@/components/LanguageProvider";
 
 type RelatedProjectsCarouselProps = {
   projects: Project[];
@@ -14,6 +15,7 @@ export function RelatedProjectsCarousel({
   projects,
   currentSlug
 }: RelatedProjectsCarouselProps) {
+  const { t, localizeProject } = useLanguage();
   const relatedProjects = useMemo(() => {
     const currentIndex = projects.findIndex((project) => project.slug === currentSlug);
     const ordered = [
@@ -72,7 +74,7 @@ export function RelatedProjectsCarousel({
       <div className="mx-auto max-w-[1440px] px-5 md:px-8">
         <div className="flex items-center justify-between gap-6">
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-titleBlue">
-            More selected work
+            {t("carousel.title")}
           </p>
           <p className="text-[11px] font-semibold tabular-nums tracking-[0.2em] text-ink/45">
             {String((activeIndex % relatedProjects.length) + 1).padStart(2, "0")} /{" "}
@@ -87,7 +89,10 @@ export function RelatedProjectsCarousel({
               style={{ transform: `translateX(-${activeIndex * 100}%)` }}
               onTransitionEnd={handleTransitionEnd}
             >
-              {slides.map((project, index) => (
+              {slides.map((project, index) => {
+                const localizedProject = localizeProject(project);
+
+                return (
                 <Link
                   key={`${project.slug}-${index}`}
                   href={`/work/${project.slug}`}
@@ -95,29 +100,30 @@ export function RelatedProjectsCarousel({
                 >
                   <div className="min-w-0">
                     <p className="text-sm font-semibold uppercase tracking-[0.2em] text-ink/50">
-                      View project
+                      {t("carousel.view")}
                     </p>
                     <h2
                       className="mt-4 break-words font-display text-[clamp(3rem,7vw,7rem)] font-black uppercase leading-[0.84] transition group-hover:opacity-70"
-                      style={{ color: project.accent }}
+                      style={{ color: localizedProject.accent }}
                     >
-                      {project.title}
+                      {localizedProject.title}
                     </h2>
                     <p className="mt-5 text-sm font-semibold uppercase tracking-[0.18em] text-ink/50">
-                      {project.category} / {project.year}
+                      {localizedProject.category} / {localizedProject.year}
                     </p>
                   </div>
                   <div className="relative aspect-[16/10] overflow-hidden bg-mist">
                     <Image
-                      src={project.image}
-                      alt={`${project.title} project preview`}
+                      src={localizedProject.image}
+                      alt={`${localizedProject.title} project preview`}
                       fill
                       className="object-cover transition duration-700 group-hover:scale-[1.02]"
                       sizes="(min-width: 768px) 55vw, 100vw"
                     />
                   </div>
                 </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
 
@@ -125,7 +131,7 @@ export function RelatedProjectsCarousel({
             type="button"
             onClick={showNextProject}
             disabled={isMoving}
-            aria-label="Show next project"
+            aria-label={t("carousel.next")}
             className="absolute right-3 top-1/2 z-10 flex h-14 w-14 -translate-y-1/2 items-center justify-center bg-titleBlue text-white shadow-lg transition hover:bg-sunYellow hover:text-titleBlue disabled:cursor-default md:right-5 md:h-20 md:w-20"
           >
             <svg

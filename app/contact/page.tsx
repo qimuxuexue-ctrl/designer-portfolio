@@ -1,79 +1,60 @@
+"use client";
+
 import Image from "next/image";
-
-const textFields = [
-  {
-    label: "Name or nickname",
-    jp: "\u304a\u540d\u524d or \u30cb\u30c3\u30af\u30cd\u30fc\u30e0",
-    required: true
-  },
-  {
-    label: "Email address",
-    jp: "\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9",
-    required: true,
-    type: "email"
-  },
-  {
-    label: "Business or project name",
-    jp: "\u4e8b\u696d\u540d or \u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u540d",
-    required: true
-  },
-  { label: "Website address", jp: "\u30a6\u30a7\u30d6\u30b5\u30a4\u30c8" },
-  {
-    label: "Location",
-    jp: "\u6240\u5728\u5730",
-    required: true,
-    placeholder: "Country / City"
-  },
-  {
-    label: "Project deadline",
-    jp: "\u3054\u5e0c\u671b\u306e\u516c\u958b\u6642\u671f",
-    placeholder: "For example, do you have a launch date?"
-  }
-];
-
-const longFields = [
-  {
-    label: "Tell me about your business or idea",
-    jp: "\u4e8b\u696d\u3084\u30a2\u30a4\u30c7\u30a2\u306b\u3064\u3044\u3066\u6559\u3048\u3066\u304f\u3060\u3055\u3044",
-    placeholder: "What do you do? Who do you serve? What do you sell?"
-  },
-  {
-    label: "What problem are you looking to overcome?",
-    jp: "\u4eca\u3044\u3061\u3070\u3093\u6574\u7406\u3057\u305f\u3044\u8ab2\u984c\u306f\u4f55\u3067\u3059\u304b\uff1f",
-    placeholder: "Tell me what is not making sense yet."
-  },
-  {
-    label: "Anything else you would like to share?",
-    jp: "\u305d\u306e\u4ed6\u5171\u6709\u3057\u305f\u3044\u3053\u3068\u306f\u3042\u308a\u307e\u3059\u304b\uff1f",
-    placeholder: "Share links, notes, or context that would help."
-  }
-];
+import { useLanguage } from "@/components/LanguageProvider";
 
 const services =
   "brand / UIUX / web / SNS ads / ecommerce banners / graphic design / packaging / exhibition";
-
-export const metadata = {
-  title: "Hinna | Make things make sense"
-};
 
 function RequiredMark({ show }: { show?: boolean }) {
   return show ? <span className="text-ember">*</span> : null;
 }
 
 export default function ContactPage() {
+  const { t } = useLanguage();
+  const textFields = [
+    { labelKey: "form.name", required: true },
+    { labelKey: "form.email", required: true, type: "email" },
+    { labelKey: "form.business", required: true },
+    { labelKey: "form.website" },
+    {
+      labelKey: "form.location",
+      required: true,
+      placeholderKey: "form.location.placeholder"
+    },
+    {
+      labelKey: "form.deadline",
+      placeholderKey: "form.deadline.placeholder"
+    }
+  ];
+  const longFields = [
+    {
+      labelKey: "form.about",
+      placeholderKey: "form.about.placeholder"
+    },
+    {
+      labelKey: "form.problem",
+      placeholderKey: "form.problem.placeholder"
+    },
+    {
+      labelKey: "form.more",
+      placeholderKey: "form.more.placeholder"
+    }
+  ];
+
   return (
     <main className="bg-white text-ink">
       <section className="flex min-h-[72vh] flex-col justify-end bg-titleBlue px-5 pb-20 pt-16 text-center md:min-h-[78vh] md:px-8 md:pb-28 md:pt-24">
         <div>
           <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
-            Contact me
+            {t("contact.label")}
           </p>
-          <h1 className="mx-auto max-w-6xl font-display text-[4rem] font-black uppercase leading-[0.82] text-sunYellow md:text-8xl lg:text-[8.5rem]">
-            Let&apos;s make
+          <h1 className="mx-auto max-w-6xl font-display text-[clamp(2.7rem,14vw,4rem)] font-black uppercase leading-[0.82] text-sunYellow md:text-8xl lg:text-[8.5rem]">
+            {t("contact.hero.1")}
             <br />
-            your idea
+            {t("contact.hero.2")}
             <br />
-            make sense
+            {t("contact.hero.3")}
           </h1>
         </div>
       </section>
@@ -81,20 +62,17 @@ export default function ContactPage() {
       <section className="mx-auto max-w-5xl px-5 py-14 md:px-8 md:py-20">
         <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-16">
           <h2 className="font-display text-4xl font-black leading-[0.95] text-titleBlue md:text-5xl">
-            I&apos;d love to hear about your project.
+            {t("contact.intro")}
           </h2>
           <div className="space-y-5 text-base font-medium leading-8">
             <p>
-              Use this form to share the details of your brand, website, packaging,
-              or studio project. The more context you include, the easier it is to
-              understand what needs to make sense.
+              {t("contact.body.1")}
             </p>
             <p>
-              If the project feels aligned, I&apos;ll follow up by email to arrange
-              a discovery call and talk through scope, timing, and next steps.
+              {t("contact.body.2")}
             </p>
             <p className="text-titleBlue">
-              You can usually expect a reply within 2 business days.
+              {t("contact.reply")}
             </p>
           </div>
         </div>
@@ -102,14 +80,16 @@ export default function ContactPage() {
         <form className="mt-12 space-y-6">
           <div className="grid gap-5 md:grid-cols-2">
             {textFields.map((field) => (
-              <label key={field.label} className="block">
+              <label key={field.labelKey} className="block">
                 <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
-                  {field.label} / {field.jp}
+                  {t(field.labelKey)}
                   <RequiredMark show={field.required} />
                 </span>
                 <input
                   className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
-                  placeholder={field.placeholder}
+                  placeholder={
+                    field.placeholderKey ? t(field.placeholderKey) : undefined
+                  }
                   type={field.type ?? "text"}
                 />
               </label>
@@ -117,13 +97,13 @@ export default function ContactPage() {
           </div>
 
           {longFields.map((field) => (
-            <label key={field.label} className="block">
+            <label key={field.labelKey} className="block">
               <span className="mb-2 block text-xs font-semibold uppercase tracking-[0.22em]">
-                {field.label} / {field.jp}
+                {t(field.labelKey)}
               </span>
               <textarea
                 className="min-h-32 w-full border border-ink bg-white px-3 py-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
-                placeholder={field.placeholder}
+                placeholder={t(field.placeholderKey)}
               />
             </label>
           ))}
@@ -133,7 +113,7 @@ export default function ContactPage() {
               className="bg-sunYellow px-10 py-4 text-sm font-black text-titleBlue transition hover:bg-titleBlue hover:text-white"
               type="button"
             >
-              Let&apos;s do this!
+              {t("contact.submit")}
             </button>
           </div>
         </form>
