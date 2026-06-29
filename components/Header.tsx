@@ -8,7 +8,7 @@ import { LanguageSwitcher, useLanguage } from "@/components/LanguageProvider";
 
 const leftLinks = [
   { href: "/about", labelKey: "nav.about" },
-  { href: "/about", labelKey: "nav.services" },
+  { href: "/services", labelKey: "nav.services" },
   { href: "/work", labelKey: "nav.work" }
 ];
 
