@@ -7,8 +7,22 @@
 :root {
   --font-sans: "Inter", "Noto Sans SC", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Archivo Black", "Arial Black", "Noto Sans SC", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
-  --font-cjk: "Noto Sans SC", "Noto Sans JP", "Microsoft YaHei", "Yu Gothic", "Hiragino Sans", sans-serif;
+  --font-cjk-sc: "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Microsoft YaHei", "Heiti SC", sans-serif;
+  --font-cjk-jp: "Noto Sans JP", "Source Han Sans JP", "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+  --font-cjk: var(--font-cjk-sc);
   color-scheme: light;
+}
+
+:root[data-language="zh"] {
+  --font-sans: var(--font-cjk-sc);
+  --font-display: var(--font-cjk-sc);
+  --font-cjk: var(--font-cjk-sc);
+}
+
+:root[data-language="ja"] {
+  --font-sans: var(--font-cjk-jp);
+  --font-display: var(--font-cjk-jp);
+  --font-cjk: var(--font-cjk-jp);
 }
 
 * {

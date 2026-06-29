@@ -37,6 +37,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     document.documentElement.lang =
       language === "zh" ? "zh-CN" : language === "ja" ? "ja" : "en";
+    document.documentElement.dataset.language = language;
   }, [language]);
 
   const value = useMemo<LanguageContextValue>(() => {
