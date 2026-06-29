@@ -35,14 +35,15 @@ export default function ContactPage() {
       kind: "select",
       placeholderKey: "form.requestType.placeholder",
       optionKeys: [
-        "form.requestType.corporate",
-        "form.requestType.media",
-        "form.requestType.ecOwn",
-        "form.requestType.ecMall",
-        "form.requestType.recruiting",
-        "form.requestType.campaign",
-        "form.requestType.webService",
-        "form.requestType.landingPage",
+        "form.requestType.brand",
+        "form.requestType.uiux",
+        "form.requestType.web",
+        "form.requestType.h5",
+        "form.requestType.snsAds",
+        "form.requestType.ecommerceBanners",
+        "form.requestType.graphicDesign",
+        "form.requestType.packaging",
+        "form.requestType.exhibition",
         "form.requestType.other"
       ]
     }
