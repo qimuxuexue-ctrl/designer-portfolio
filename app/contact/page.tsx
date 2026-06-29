@@ -31,8 +31,20 @@ export default function ContactPage() {
       placeholderKey: "form.payment.placeholder"
     },
     {
-      labelKey: "form.timeline",
-      placeholderKey: "form.timeline.placeholder"
+      labelKey: "form.requestType",
+      kind: "select",
+      placeholderKey: "form.requestType.placeholder",
+      optionKeys: [
+        "form.requestType.corporate",
+        "form.requestType.media",
+        "form.requestType.ecOwn",
+        "form.requestType.ecMall",
+        "form.requestType.recruiting",
+        "form.requestType.campaign",
+        "form.requestType.webService",
+        "form.requestType.landingPage",
+        "form.requestType.other"
+      ]
     }
   ];
   const longFields = [
@@ -93,13 +105,29 @@ export default function ContactPage() {
                   {t(field.labelKey)}
                   <RequiredMark show={field.required} />
                 </span>
-                <input
-                  className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
-                  placeholder={
-                    field.placeholderKey ? t(field.placeholderKey) : undefined
-                  }
-                  type={field.type ?? "text"}
-                />
+                {field.kind === "select" ? (
+                  <select
+                    className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                    defaultValue=""
+                  >
+                    <option disabled value="">
+                      {t(field.placeholderKey)}
+                    </option>
+                    {field.optionKeys.map((optionKey) => (
+                      <option key={optionKey} value={optionKey}>
+                        {t(optionKey)}
+                      </option>
+                    ))}
+                  </select>
+                ) : (
+                  <input
+                    className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                    placeholder={
+                      field.placeholderKey ? t(field.placeholderKey) : undefined
+                    }
+                    type={field.type ?? "text"}
+                  />
+                )}
               </label>
             ))}
           </div>
