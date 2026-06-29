@@ -25,6 +25,14 @@ export default function ContactPage() {
     {
       labelKey: "form.deadline",
       placeholderKey: "form.deadline.placeholder"
+    },
+    {
+      labelKey: "form.payment",
+      placeholderKey: "form.payment.placeholder"
+    },
+    {
+      labelKey: "form.timeline",
+      placeholderKey: "form.timeline.placeholder"
     }
   ];
   const longFields = [
