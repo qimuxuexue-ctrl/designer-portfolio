@@ -20,10 +20,10 @@ export default function Home() {
         </h1>
 
         <div className="mx-auto grid max-w-[1040px] gap-14 md:grid-cols-2 md:gap-x-12 md:gap-y-16">
-          {projects.slice(0, 3).map((project, index) => (
+          {projects.slice(0, 6).map((project, index) => (
             <div
               key={project.slug}
-              className={index === 2 ? "md:col-start-1 md:mt-7" : undefined}
+              className={index % 2 === 0 && index > 1 ? "md:mt-7" : undefined}
             >
               <ProjectCard project={project} variant="portfolio" />
             </div>

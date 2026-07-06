@@ -133,6 +133,64 @@ export const projects: Project[] = [
       "/images/project-northline.svg"
     ],
     accent: "#826f5b"
+  },
+  {
+    slug: "kumo-market",
+    title: "Kumo Market",
+    category: "Ecommerce Banners",
+    year: "2026",
+    summary:
+      "A modular ecommerce visual system for seasonal promotions, product drops, and storefront banners.",
+    sector: "Ecommerce",
+    context:
+      "Kumo Market is a concept store that needs frequent campaign visuals without losing brand consistency from one promotion to the next.",
+    challenge:
+      "The work needed to support fast-moving sales moments while keeping product information, seasonal mood, and call-to-action hierarchy easy to scan.",
+    conceptTitle: "Fast visuals, steady system",
+    concept:
+      "The design direction uses repeatable banner structures, bold product windows, and flexible color blocks so new campaigns can be produced quickly.",
+    outcome:
+      "The system gives the store a reliable visual toolkit for homepage banners, category modules, email headers, and social cuts.",
+    quote:
+      "A repeatable design system made daily promotional work feel organized instead of improvised.",
+    services: ["Ecommerce", "Banner System", "Campaign Visuals"],
+    image: "/images/project-field-notes.svg",
+    gallery: [
+      "/images/project-field-notes.svg",
+      "/images/project-cove-naturals.svg",
+      "/images/project-aster-beauty.svg",
+      "/images/project-quiet-form.svg"
+    ],
+    accent: "#D65F38"
+  },
+  {
+    slug: "signal-bento",
+    title: "Signal Bento",
+    category: "UIUX / H5",
+    year: "2026",
+    summary:
+      "A compact mobile-first interface concept for a playful food ordering and launch campaign experience.",
+    sector: "Food and digital",
+    context:
+      "Signal Bento is a fictional launch experience that connects a short campaign page with a simple mobile ordering flow.",
+    challenge:
+      "The challenge was to make the experience feel energetic while keeping the steps, product choices, and conversion path immediately understandable.",
+    conceptTitle: "A quick path to appetite",
+    concept:
+      "The interface uses large touch targets, strong section rhythm, and a small set of repeatable product cards to keep the mobile journey direct.",
+    outcome:
+      "The result works as both a lightweight H5 campaign and a starter UI kit for later ordering screens.",
+    quote:
+      "The mobile flow feels bright and quick without asking the user to think too hard.",
+    services: ["UIUX", "H5", "Campaign Page"],
+    image: "/images/project-quiet-form.svg",
+    gallery: [
+      "/images/project-quiet-form.svg",
+      "/images/project-soft-archive.svg",
+      "/images/project-field-notes.svg",
+      "/images/project-earth-house.svg"
+    ],
+    accent: "#19C7A1"
   }
 ];
 
