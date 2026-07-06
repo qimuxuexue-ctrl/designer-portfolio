@@ -13,7 +13,7 @@ const leftLinks = [
 ];
 
 const rightLinks = [
-  { href: "/about", labelKey: "nav.journal" },
+  { href: "/why-hinna", labelKey: "nav.journal" },
   { href: "/contact", labelKey: "nav.contact" }
 ];
 
