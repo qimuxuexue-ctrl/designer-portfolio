@@ -24,14 +24,47 @@ type LanguageContextValue = {
 
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
+function isSupportedLanguage(value: string | null): value is Language {
+  return value === "en" || value === "zh" || value === "ja";
+}
+
+function detectBrowserLanguage(): Language {
+  const browserLanguages =
+    navigator.languages && navigator.languages.length > 0
+      ? navigator.languages
+      : [navigator.language];
+
+  const normalizedLanguages = browserLanguages
+    .filter(Boolean)
+    .map((browserLanguage) => browserLanguage.toLowerCase());
+
+  if (normalizedLanguages.some((browserLanguage) => browserLanguage.startsWith("zh"))) {
+    return "zh";
+  }
+
+  if (normalizedLanguages.some((browserLanguage) => browserLanguage.startsWith("ja"))) {
+    return "ja";
+  }
+
+  if (normalizedLanguages.some((browserLanguage) => browserLanguage.startsWith("en"))) {
+    return "en";
+  }
+
+  return "en";
+}
+
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>("en");
 
   useEffect(() => {
     const savedLanguage = window.localStorage.getItem("hinna-language");
-    if (savedLanguage === "en" || savedLanguage === "zh" || savedLanguage === "ja") {
+
+    if (isSupportedLanguage(savedLanguage)) {
       setLanguageState(savedLanguage);
+      return;
     }
+
+    setLanguageState(detectBrowserLanguage());
   }, []);
 
   useEffect(() => {
