@@ -12,6 +12,13 @@ export type Project = {
   outcome: string;
   quote: string;
   services: string[];
+  filters: {
+    colors: string[];
+    services: string[];
+    industries: string[];
+    formats: string[];
+    tones: string[];
+  };
   image: string;
   gallery: string[];
   accent: string;
@@ -38,6 +45,13 @@ export const projects: Project[] = [
     quote:
       "The work gave the product a stronger point of view while making the whole range easier to navigate.",
     services: ["Identity", "Art Direction", "Digital System"],
+    filters: {
+      colors: ["Orange", "Green", "Cream"],
+      services: ["Brand", "Packaging", "Graphic Design"],
+      industries: ["Beauty", "Personal Care"],
+      formats: ["Packaging", "SNS Ads"],
+      tones: ["Bright", "Natural"]
+    },
     image: "/images/project-cove-naturals.svg",
     gallery: [
       "/images/project-cove-naturals.svg",
@@ -67,6 +81,13 @@ export const projects: Project[] = [
     quote:
       "A flexible foundation made the growing range feel considered rather than complicated.",
     services: ["Packaging", "Naming", "Campaign Direction"],
+    filters: {
+      colors: ["Blue", "Pink", "White"],
+      services: ["Packaging", "Brand", "Graphic Design"],
+      industries: ["Beauty", "Retail"],
+      formats: ["Packaging", "Ecommerce Banners"],
+      tones: ["Clean", "Soft"]
+    },
     image: "/images/project-aster-beauty.svg",
     gallery: [
       "/images/project-aster-beauty.svg",
@@ -96,6 +117,13 @@ export const projects: Project[] = [
     quote:
       "The final direction feels practical, warm, and easy to recognize in the moments that matter.",
     services: ["Packaging", "Art Direction", "Photography Direction"],
+    filters: {
+      colors: ["Red", "Cream", "Gold"],
+      services: ["Packaging", "Graphic Design"],
+      industries: ["Home Care", "Lifestyle"],
+      formats: ["Packaging", "Ecommerce Banners"],
+      tones: ["Warm", "Practical"]
+    },
     image: "/images/project-earth-house.svg",
     gallery: [
       "/images/project-earth-house.svg",
@@ -125,6 +153,13 @@ export const projects: Project[] = [
     quote:
       "The system stays quiet when the content needs space and becomes expressive when the story asks for it.",
     services: ["Editorial", "Templates", "Design System"],
+    filters: {
+      colors: ["Neutral", "Brown", "Black"],
+      services: ["Graphic Design", "Web"],
+      industries: ["Culture", "Editorial"],
+      formats: ["Web", "Print"],
+      tones: ["Editorial", "Calm"]
+    },
     image: "/images/project-soft-archive.svg",
     gallery: [
       "/images/project-soft-archive.svg",
@@ -154,6 +189,13 @@ export const projects: Project[] = [
     quote:
       "A repeatable design system made daily promotional work feel organized instead of improvised.",
     services: ["Ecommerce", "Banner System", "Campaign Visuals"],
+    filters: {
+      colors: ["Orange", "Blue", "White"],
+      services: ["Ecommerce Banners", "SNS Ads", "Graphic Design"],
+      industries: ["Ecommerce", "Retail"],
+      formats: ["Ecommerce Banners", "SNS Ads"],
+      tones: ["Fast", "Playful"]
+    },
     image: "/images/project-field-notes.svg",
     gallery: [
       "/images/project-field-notes.svg",
@@ -183,6 +225,13 @@ export const projects: Project[] = [
     quote:
       "The mobile flow feels bright and quick without asking the user to think too hard.",
     services: ["UIUX", "H5", "Campaign Page"],
+    filters: {
+      colors: ["Green", "Blue", "Yellow"],
+      services: ["UIUX", "H5", "Web"],
+      industries: ["Food", "Digital"],
+      formats: ["H5", "Website"],
+      tones: ["Playful", "Clear"]
+    },
     image: "/images/project-quiet-form.svg",
     gallery: [
       "/images/project-quiet-form.svg",
