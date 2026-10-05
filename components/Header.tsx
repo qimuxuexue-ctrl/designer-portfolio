@@ -32,7 +32,7 @@ export function Header() {
     language === "en" ? "tracking-[0.32em]" : "tracking-[0.14em]";
 
   return (
-    <header className="relative z-50 bg-white">
+    <header className="relative z-50 bg-paper">
       <div className="mx-auto grid max-w-[1880px] grid-cols-[1fr_auto_1fr] items-center px-7 py-3 md:px-12 md:py-4">
         <nav
           className={`hidden items-center gap-14 font-sans text-[11px] font-semibold uppercase text-ink lg:flex ${desktopTracking}`}
@@ -107,8 +107,8 @@ export function Header() {
           aria-label="Close navigation"
           onClick={() => setOpen(false)}
         >
-          <span className="absolute h-0.5 w-8 rotate-45 bg-white" />
-          <span className="absolute h-0.5 w-8 -rotate-45 bg-white" />
+          <span className="absolute h-0.5 w-8 rotate-45 bg-paper" />
+          <span className="absolute h-0.5 w-8 -rotate-45 bg-paper" />
         </button>
 
         <div

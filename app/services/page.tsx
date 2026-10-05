@@ -40,7 +40,7 @@ export default function ServicesPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="overflow-hidden bg-white text-ink">
+    <main className="overflow-hidden bg-paper text-ink">
       <section className="bg-titleBlue px-5 py-16 text-white md:px-8 md:py-24">
         <div className="mx-auto grid max-w-[1220px] gap-10 md:grid-cols-[0.78fr_1.22fr] md:items-end">
           <div>
@@ -88,7 +88,7 @@ export default function ServicesPage() {
             (key, index) => (
               <article
                 key={key}
-                className="border border-titleBlue/25 bg-white p-6 md:min-h-52"
+                className="border border-titleBlue/25 bg-paper p-6 md:min-h-52"
               >
                 <p className="font-display text-5xl font-black text-sunYellow">
                   0{index + 1}
@@ -156,7 +156,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <section className="bg-sunYellow px-5 py-16 text-titleBlue md:px-8 md:py-24">
+      <section className="bg-sunYellow px-5 py-16 text-ink md:px-8 md:py-24">
         <div className="mx-auto grid max-w-[1220px] gap-10 md:grid-cols-[1fr_1fr]">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.34em]">
@@ -168,7 +168,7 @@ export default function ServicesPage() {
           </div>
           <div className="grid gap-5">
             {["services.fit.1", "services.fit.2", "services.fit.3"].map((key) => (
-              <p key={key} className="border border-titleBlue bg-white/40 p-5 text-lg font-bold leading-8">
+              <p key={key} className="border border-titleBlue bg-paper/40 p-5 text-lg font-bold leading-8">
                 {t(key)}
               </p>
             ))}
@@ -208,7 +208,7 @@ export default function ServicesPage() {
             </h2>
             <Link
               href="/contact"
-              className="inline-flex justify-center bg-sunYellow px-8 py-4 text-xs font-black uppercase tracking-[0.3em] text-titleBlue transition hover:bg-white"
+              className="inline-flex justify-center bg-sunYellow px-8 py-4 text-xs font-black uppercase tracking-[0.3em] text-ink transition hover:bg-paper"
             >
               {t("nav.contact")}
             </Link>

@@ -31,7 +31,7 @@ export default function AboutPage() {
   const { t } = useLanguage();
 
   return (
-    <main className="overflow-hidden bg-white text-titleBlue">
+    <main className="overflow-hidden bg-paper text-titleBlue">
       <section className="about-reveal mx-auto max-w-[1120px] px-5 pb-14 pt-12 md:min-h-[760px] md:px-8 md:pb-24 md:pt-20">
         <div className="relative mx-auto flex max-w-[820px] flex-col items-center">
           <h1 className="relative z-10 max-w-[760px] text-center font-display text-[clamp(3.4rem,9vw,8.2rem)] font-black leading-[0.82]">
@@ -42,7 +42,7 @@ export default function AboutPage() {
             {t("about.hero.3")}
           </h1>
 
-          <div className="about-float relative -mt-5 aspect-[4/5] w-[76%] max-w-[390px] overflow-hidden bg-sunYellow shadow-[0_18px_50px_rgba(60,99,200,0.18)] md:-mt-10">
+          <div className="about-float relative -mt-5 aspect-[4/5] w-[76%] max-w-[390px] overflow-hidden bg-sunYellow shadow-[0_18px_50px_rgba(89,120,167,0.18)] md:-mt-10">
             <Image
               src="/images/about-statement.svg"
               alt="Studio mood placeholder"
@@ -85,7 +85,7 @@ export default function AboutPage() {
             className="object-cover"
           />
         </div>
-        <div className="relative aspect-[4/5] overflow-hidden bg-white">
+        <div className="relative aspect-[4/5] overflow-hidden bg-paper">
           <Image
             src="/images/project-soft-archive.svg"
             alt="Reference object placeholder"
@@ -186,7 +186,7 @@ export default function AboutPage() {
         <div className="mt-10 flex flex-col items-start gap-4 md:mt-0 md:items-end md:self-end">
           <Link
             href="/contact"
-            className="bg-sunYellow px-8 py-4 text-[10px] font-black uppercase tracking-[0.34em] text-titleBlue transition hover:bg-titleBlue hover:text-white"
+            className="bg-sunYellow px-8 py-4 text-[10px] font-black uppercase tracking-[0.34em] text-ink transition hover:bg-titleBlue hover:text-white"
           >
             {t("nav.contact")}
           </Link>

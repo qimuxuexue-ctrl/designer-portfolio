@@ -35,7 +35,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="overflow-hidden bg-white text-ink">
+    <main className="overflow-hidden bg-paper text-ink">
       <section className="project-reveal mx-auto max-w-[1440px] px-5 pb-10 pt-12 md:px-8 md:pb-16 md:pt-20">
         <Link
           href="/work"
@@ -190,7 +190,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             sizes="(min-width: 768px) 65vw, 100vw"
           />
         </div>
-        <div className="flex min-h-[360px] flex-col justify-between bg-sunYellow p-7 text-titleBlue md:p-10">
+        <div className="flex min-h-[360px] flex-col justify-between bg-sunYellow p-7 text-ink md:p-10">
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em]">
             <LocalizedText textKey="project.outcome" />
           </p>
@@ -212,7 +212,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
           <Link
             href="/contact"
-            className="inline-flex justify-center bg-sunYellow px-8 py-4 text-[11px] font-black uppercase tracking-[0.28em] text-titleBlue transition hover:bg-titleBlue hover:text-white"
+            className="inline-flex justify-center bg-sunYellow px-8 py-4 text-[11px] font-black uppercase tracking-[0.28em] text-ink transition hover:bg-titleBlue hover:text-white"
           >
             <LocalizedText textKey="nav.contact" />
           </Link>

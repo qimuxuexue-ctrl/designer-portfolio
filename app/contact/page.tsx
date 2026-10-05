@@ -64,7 +64,7 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="bg-white text-ink">
+    <main className="bg-paper text-ink">
       <section className="flex min-h-[72vh] flex-col justify-end bg-titleBlue px-5 pb-20 pt-16 text-center md:min-h-[78vh] md:px-8 md:pb-28 md:pt-24">
         <div>
           <p className="mx-auto mb-8 max-w-3xl text-xs font-semibold uppercase tracking-[0.45em] text-white/80">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                 </span>
                 {field.kind === "select" ? (
                   <select
-                    className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                    className="h-11 w-full border border-ink bg-paper px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
                     defaultValue=""
                   >
                     <option disabled value="">
@@ -122,7 +122,7 @@ export default function ContactPage() {
                   </select>
                 ) : (
                   <input
-                    className="h-11 w-full border border-ink bg-white px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                    className="h-11 w-full border border-ink bg-paper px-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
                     placeholder={
                       field.placeholderKey ? t(field.placeholderKey) : undefined
                     }
@@ -139,7 +139,7 @@ export default function ContactPage() {
                 {t(field.labelKey)}
               </span>
               <textarea
-                className="min-h-32 w-full border border-ink bg-white px-3 py-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
+                className="min-h-32 w-full border border-ink bg-paper px-3 py-3 text-sm outline-none transition focus:border-titleBlue focus:ring-2 focus:ring-bookingBlue/30"
                 placeholder={t(field.placeholderKey)}
               />
             </label>
@@ -147,7 +147,7 @@ export default function ContactPage() {
 
           <div className="flex justify-end">
             <button
-              className="bg-sunYellow px-10 py-4 text-sm font-black text-titleBlue transition hover:bg-titleBlue hover:text-white"
+              className="bg-sunYellow px-10 py-4 text-sm font-black text-ink transition hover:bg-titleBlue hover:text-white"
               type="button"
             >
               {t("contact.submit")}

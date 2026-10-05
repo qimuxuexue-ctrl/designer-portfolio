@@ -5,6 +5,20 @@
 @tailwind utilities;
 
 :root {
+  --color-ink: 41 38 31;
+  --color-paper: 255 240 227;
+  --color-mist: 207 196 178;
+  --color-clay: 169 156 139;
+  --color-moss: 54 124 54;
+  --color-dusk: 72 97 133;
+  --color-bubblegum: 232 163 70;
+  --color-mint: 73 154 77;
+  --color-booking-blue: 89 120 167;
+  --color-title-blue: 89 120 167;
+  --color-ember: 154 101 25;
+  --color-sun-yellow: 209 138 34;
+  --color-plum: 93 86 76;
+  --color-blush: 226 220 203;
   --font-sans: "Inter", "Noto Sans SC", "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
   --font-display: "Archivo Black", "Noto Sans SC", "Noto Sans JP", "Arial Black", "Helvetica Neue", Arial, sans-serif;
   --font-cjk-sc: "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "PingFang SC", "Microsoft YaHei", "Heiti SC", sans-serif;
@@ -32,8 +46,8 @@ html {
 
 body {
   margin: 0;
-  background: #ffffff;
-  color: #171717;
+  background: rgb(var(--color-paper));
+  color: rgb(var(--color-ink));
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
@@ -44,8 +58,8 @@ a {
 }
 
 ::selection {
-  background: #171717;
-  color: #f7f4ee;
+  background: rgb(var(--color-title-blue));
+  color: rgb(var(--color-paper));
 }
 
 .marquee-track {

@@ -17,7 +17,7 @@ export function Footer() {
           {t("footer.body")}
         </p>
         <Link
-          className="mx-auto mt-9 inline-flex w-full max-w-64 justify-center bg-sunYellow px-8 py-4 text-xs font-black uppercase tracking-[0.45em] text-titleBlue transition hover:brightness-95 md:px-12 md:tracking-[0.55em]"
+          className="mx-auto mt-9 inline-flex w-full max-w-64 justify-center bg-sunYellow px-8 py-4 text-xs font-black uppercase tracking-[0.45em] text-ink transition hover:brightness-95 md:px-12 md:tracking-[0.55em]"
           href="/contact"
         >
           {t("footer.email")}

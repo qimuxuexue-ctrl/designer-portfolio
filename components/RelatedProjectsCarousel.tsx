@@ -132,7 +132,7 @@ export function RelatedProjectsCarousel({
             onClick={showNextProject}
             disabled={isMoving}
             aria-label={t("carousel.next")}
-            className="absolute right-3 top-1/2 z-10 flex h-14 w-14 -translate-y-1/2 items-center justify-center bg-titleBlue text-white shadow-lg transition hover:bg-sunYellow hover:text-titleBlue disabled:cursor-default md:right-5 md:h-20 md:w-20"
+            className="absolute right-3 top-1/2 z-10 flex h-14 w-14 -translate-y-1/2 items-center justify-center bg-titleBlue text-white shadow-lg transition hover:bg-sunYellow hover:text-ink disabled:cursor-default md:right-5 md:h-20 md:w-20"
           >
             <svg
               aria-hidden="true"

@@ -9,20 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#171717",
-        paper: "#ffffff",
-        mist: "#dfded6",
-        clay: "#a95f3f",
-        moss: "#4d5a43",
-        dusk: "#313c55",
-        bubblegum: "#ef66c5",
-        mint: "#19C7A1",
-        bookingBlue: "#547ADD",
-        titleBlue: "#3C63C8",
-        ember: "#D65F38",
-        sunYellow: "#F8D44D",
-        plum: "#92165c",
-        blush: "#f2e7e8"
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        paper: "rgb(var(--color-paper) / <alpha-value>)",
+        mist: "rgb(var(--color-mist) / <alpha-value>)",
+        clay: "rgb(var(--color-clay) / <alpha-value>)",
+        moss: "rgb(var(--color-moss) / <alpha-value>)",
+        dusk: "rgb(var(--color-dusk) / <alpha-value>)",
+        bubblegum: "rgb(var(--color-bubblegum) / <alpha-value>)",
+        mint: "rgb(var(--color-mint) / <alpha-value>)",
+        bookingBlue: "rgb(var(--color-booking-blue) / <alpha-value>)",
+        titleBlue: "rgb(var(--color-title-blue) / <alpha-value>)",
+        ember: "rgb(var(--color-ember) / <alpha-value>)",
+        sunYellow: "rgb(var(--color-sun-yellow) / <alpha-value>)",
+        plum: "rgb(var(--color-plum) / <alpha-value>)",
+        blush: "rgb(var(--color-blush) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["var(--font-sans)", "Arial", "sans-serif"],

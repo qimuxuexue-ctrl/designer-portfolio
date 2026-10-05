@@ -139,7 +139,7 @@ export function WorkFilter({ projects }: { projects: Project[] }) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="fixed right-0 top-[46vh] z-40 hidden -translate-y-1/2 items-center gap-3 rounded-l-full bg-sunYellow py-4 pl-5 pr-4 text-titleBlue shadow-[0_14px_40px_rgba(23,23,23,0.16)] transition hover:bg-titleBlue hover:text-white md:inline-flex"
+        className="fixed right-0 top-[46vh] z-40 hidden -translate-y-1/2 items-center gap-3 rounded-l-full bg-sunYellow py-4 pl-5 pr-4 text-ink shadow-[0_14px_40px_rgba(41,38,31,0.16)] transition hover:bg-titleBlue hover:text-white md:inline-flex"
         aria-label={text.open}
       >
         <span className="text-[10px] font-black uppercase tracking-[0.2em] [writing-mode:vertical-rl]">
@@ -151,7 +151,7 @@ export function WorkFilter({ projects }: { projects: Project[] }) {
       <button
         type="button"
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-sunYellow text-titleBlue shadow-[0_14px_40px_rgba(23,23,23,0.18)] md:hidden"
+        className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-sunYellow text-ink shadow-[0_14px_40px_rgba(41,38,31,0.18)] md:hidden"
         aria-label={text.open}
       >
         <span className="relative h-7 w-7 rounded-full border-[3px] border-current after:absolute after:-bottom-1 after:-right-1 after:h-3 after:w-[3px] after:rotate-[-45deg] after:bg-current" />
@@ -251,7 +251,7 @@ export function WorkFilter({ projects }: { projects: Project[] }) {
 
             <div className="fixed inset-x-0 bottom-0 border-t border-white/15 bg-ink px-5 py-4 text-white md:px-12">
               <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
-                <div className="bg-white px-4 py-3 font-black text-ink md:px-8">
+                <div className="bg-paper px-4 py-3 font-black text-ink md:px-8">
                   <span className="text-xs uppercase tracking-[0.14em]">
                     {filteredProjects.length} {text.result}
                   </span>
@@ -270,7 +270,7 @@ export function WorkFilter({ projects }: { projects: Project[] }) {
                   <button
                     type="button"
                     onClick={() => setIsOpen(false)}
-                    className="bg-sunYellow px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-titleBlue transition hover:bg-white md:px-12"
+                    className="bg-sunYellow px-7 py-4 text-sm font-black uppercase tracking-[0.12em] text-ink transition hover:bg-paper md:px-12"
                   >
                     {text.search}
                   </button>

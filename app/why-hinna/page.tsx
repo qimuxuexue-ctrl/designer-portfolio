@@ -44,14 +44,14 @@ function VideoPlaceholder() {
 
   return (
     <div className="relative aspect-video overflow-hidden bg-sunYellow shadow-[0_20px_50px_rgba(0,0,0,0.18)]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#F8D44D_0%,#547ADD_55%,#19C7A1_100%)]" />
-      <div className="absolute left-[12%] top-[16%] h-[66%] w-[24%] rounded-t-full bg-white/70" />
-      <div className="absolute bottom-[18%] right-[12%] h-[48%] w-[34%] bg-white/55" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#D18A22_0%,#5978A7_55%,#499A4D_100%)]" />
+      <div className="absolute left-[12%] top-[16%] h-[66%] w-[24%] rounded-t-full bg-paper/70" />
+      <div className="absolute bottom-[18%] right-[12%] h-[48%] w-[34%] bg-paper/55" />
       <div className="absolute bottom-0 left-0 right-0 flex h-10 items-center gap-3 bg-ink/78 px-4 text-white">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-sunYellow text-[10px] text-titleBlue">
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-sunYellow text-[10px] text-ink">
           {t("why.video.play")}
         </span>
-        <div className="h-1 flex-1 bg-white/30">
+        <div className="h-1 flex-1 bg-paper/30">
           <div className="h-full w-1/3 bg-sunYellow" />
         </div>
         <span className="text-[10px] font-bold tracking-[0.18em]">00:42</span>
@@ -76,7 +76,7 @@ export default function WhyHinnaPage() {
   const featuredProjects = projects.slice(0, 6).map((project) => localizeProject(project));
 
   return (
-    <main className="overflow-hidden bg-[#fbf7ef] text-ink">
+    <main className="overflow-hidden bg-paper text-ink">
       <Marquee />
 
       <section className="bg-titleBlue px-5 pb-10 pt-12 text-white md:px-8 md:pb-14 md:pt-16">
@@ -94,7 +94,7 @@ export default function WhyHinnaPage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
                 href="/contact"
-                className="bg-sunYellow px-6 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-titleBlue transition hover:bg-white"
+                className="bg-sunYellow px-6 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-ink transition hover:bg-paper"
               >
                 {t("why.hero.cta")}
               </Link>
@@ -151,7 +151,7 @@ export default function WhyHinnaPage() {
         <p className="mx-auto mt-4 max-w-xl text-sm font-semibold leading-7 text-ink/62">
           {t("why.compare.body")}
         </p>
-        <div className="mx-auto mt-10 max-w-4xl overflow-x-auto rounded-lg border border-ink/10 bg-white">
+        <div className="mx-auto mt-10 max-w-4xl overflow-x-auto rounded-lg border border-ink/10 bg-paper">
           <table className="w-full min-w-[760px] border-collapse text-left text-sm">
             <thead>
               <tr className="border-b border-ink/10">
@@ -193,7 +193,7 @@ export default function WhyHinnaPage() {
         <div className="mx-auto mt-10 grid max-w-5xl gap-x-5 gap-y-10 md:grid-cols-3">
           {featuredProjects.map((project) => (
             <Link key={project.slug} href={`/work/${project.slug}`} className="group block">
-              <div className="relative aspect-[1.22] overflow-hidden bg-white">
+              <div className="relative aspect-[1.22] overflow-hidden bg-paper">
                 <Image
                   src={project.image}
                   alt={`${project.title} placeholder`}
@@ -241,7 +241,7 @@ export default function WhyHinnaPage() {
             </p>
             <Link
               href="/contact"
-              className="mt-7 inline-flex bg-sunYellow px-6 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-titleBlue transition hover:bg-white"
+              className="mt-7 inline-flex bg-sunYellow px-6 py-3 text-[10px] font-black uppercase tracking-[0.22em] text-ink transition hover:bg-paper"
             >
               {t("why.create.cta")}
             </Link>
@@ -260,7 +260,7 @@ export default function WhyHinnaPage() {
             <p className="whitespace-pre-line font-display text-5xl font-black uppercase leading-[0.82]">
               {t("why.lead.cover")}
             </p>
-            <div className="absolute bottom-6 left-6 right-6 h-20 bg-white/18" />
+            <div className="absolute bottom-6 left-6 right-6 h-20 bg-paper/18" />
           </div>
           <div>
             <h2 className="font-display text-4xl font-black uppercase leading-tight text-titleBlue">
@@ -271,7 +271,7 @@ export default function WhyHinnaPage() {
             </p>
             <div className="mt-6 max-w-sm space-y-3">
               <input
-                className="h-11 w-full border border-ink bg-white px-3 text-sm"
+                className="h-11 w-full border border-ink bg-paper px-3 text-sm"
                 placeholder={t("why.lead.email")}
               />
               <button className="bg-ember px-5 py-3 text-xs font-black uppercase tracking-[0.18em] text-white">
@@ -290,8 +290,8 @@ export default function WhyHinnaPage() {
           {industries.map(([titleKey, bodyKey, color]) => (
             <article key={titleKey}>
               <div className={`relative aspect-[3/4] overflow-hidden ${color}`}>
-                <div className="absolute inset-0 bg-white/12" />
-                <div className="absolute bottom-6 left-1/2 h-24 w-16 -translate-x-1/2 rounded-t-full bg-white/22" />
+                <div className="absolute inset-0 bg-paper/12" />
+                <div className="absolute bottom-6 left-1/2 h-24 w-16 -translate-x-1/2 rounded-t-full bg-paper/22" />
               </div>
               <h3 className="mt-4 text-lg font-black text-titleBlue">{t(titleKey)}</h3>
               <p className="text-xs font-semibold text-ink/56">{t(bodyKey)}</p>

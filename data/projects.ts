@@ -59,7 +59,7 @@ export const projects: Project[] = [
       "/images/project-northline.svg",
       "/images/project-quiet-form.svg"
     ],
-    accent: "#92165c"
+    accent: "#5978A7"
   },
   {
     slug: "aster-beauty",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
       "/images/project-field-notes.svg",
       "/images/project-northline.svg"
     ],
-    accent: "#92165c"
+    accent: "#5978A7"
   },
   {
     slug: "earth-house",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       "/images/project-northline.svg",
       "/images/project-field-notes.svg"
     ],
-    accent: "#d7a8c2"
+    accent: "#9A6519"
   },
   {
     slug: "soft-archive",
@@ -167,7 +167,7 @@ export const projects: Project[] = [
       "/images/project-quiet-form.svg",
       "/images/project-northline.svg"
     ],
-    accent: "#826f5b"
+    accent: "#5D564C"
   },
   {
     slug: "kumo-market",
@@ -203,7 +203,7 @@ export const projects: Project[] = [
       "/images/project-aster-beauty.svg",
       "/images/project-quiet-form.svg"
     ],
-    accent: "#D65F38"
+    accent: "#9A6519"
   },
   {
     slug: "signal-bento",
@@ -239,7 +239,7 @@ export const projects: Project[] = [
       "/images/project-field-notes.svg",
       "/images/project-earth-house.svg"
     ],
-    accent: "#19C7A1"
+    accent: "#367C36"
   }
 ];
 
