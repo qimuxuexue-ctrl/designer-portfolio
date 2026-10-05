@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Abstract desk placeholder">
   <rect width="1200" height="900" fill="#5978A7"/>
-  <rect x="120" y="130" width="460" height="560" fill="#D18A22"/>
-  <rect x="640" y="180" width="360" height="460" fill="#FFF0E3"/>
+  <rect x="120" y="130" width="460" height="560" fill="#E8A346"/>
+  <rect x="640" y="180" width="360" height="460" fill="#FFFFFF"/>
   <circle cx="820" cy="410" r="120" fill="#486185"/>
   <rect x="720" y="540" width="280" height="40" fill="#9A6519"/>
   <rect x="210" y="235" width="260" height="330" fill="#499A4D"/>

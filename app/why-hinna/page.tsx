@@ -44,7 +44,7 @@ function VideoPlaceholder() {
 
   return (
     <div className="relative aspect-video overflow-hidden bg-sunYellow shadow-[0_20px_50px_rgba(0,0,0,0.18)]">
-      <div className="absolute inset-0 bg-[linear-gradient(135deg,#D18A22_0%,#5978A7_55%,#499A4D_100%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(135deg,#E8A346_0%,#5978A7_55%,#499A4D_100%)]" />
       <div className="absolute left-[12%] top-[16%] h-[66%] w-[24%] rounded-t-full bg-paper/70" />
       <div className="absolute bottom-[18%] right-[12%] h-[48%] w-[34%] bg-paper/55" />
       <div className="absolute bottom-0 left-0 right-0 flex h-10 items-center gap-3 bg-ink/78 px-4 text-white">
